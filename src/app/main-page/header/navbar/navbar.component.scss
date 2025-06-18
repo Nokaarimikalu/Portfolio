@@ -1,0 +1,11 @@
+nav {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-evenly;
+    font-size: 2.4rem;
+    width: 60vw;
+    > a{
+        color: white;
+        font-weight: 600;
+    }
+}
