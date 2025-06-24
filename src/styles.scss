@@ -36,5 +36,16 @@ html::-webkit-scrollbar {
 }
 
 
+header, section, footer{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    .content{
+    width: 100%;
+    max-width: 1980px;
+    }
+}
+
+
 
 
