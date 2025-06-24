@@ -1,0 +1,22 @@
+
+.icon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    height: 100px;
+    width: 100px;
+    img{
+        height: 80px;
+        width: 80px;
+        filter: grayscale(10);
+        &:hover{
+            filter: grayscale(0);
+        }
+    }
+    span{
+        font-size: 20px;
+    }
+}
+

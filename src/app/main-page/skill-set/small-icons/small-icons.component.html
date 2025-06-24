@@ -1,1 +1,6 @@
-<h1>wortks</h1>
+@for (item of icons; track item.name){
+        <div class="icon">
+            <img src="{{item.url}}" alt="">
+            <span>{{item.name}}</span>
+        </div>
+}
