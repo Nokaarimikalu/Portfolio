@@ -1,0 +1,29 @@
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    background-color: #111111;
+    top: 0;
+    z-index: 9999;
+    height: 8dvh;
+    padding-top: 12px;
+    .logo {
+        height: 60px;
+        width: 120px;
+        background-image: url("/assets/image/header/whiteLogo.png");
+        background-size: 60px 60px;
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: filter 0.3s ease;
+        &:hover {
+            filter: sepia(100%) saturate(10000%) hue-rotate(280deg);
+        }
+    }
+    .language {
+        width: 8%;
+    }
+    app-navbar {
+        flex: 1;
+    }
+}

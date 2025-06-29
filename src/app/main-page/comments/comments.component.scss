@@ -1,42 +1,22 @@
 section {
-    height: 90dvh;
     font-size: 10px;
-    @media (max-width: 1390px) {
+    @media (max-width: 420px) {
         font-size: 9px;
     }
-    @media (max-width: 1250px) {
+        @media (max-width: 380px) {
         font-size: 8px;
     }
-    @media (max-width: 1060px) {
+            @media (max-width: 340px) {
         font-size: 7px;
-    }
-    @media (max-width: 930px) {
-        font-size: 12px;
-    }
-    @media (max-width: 740px) {
-        font-size: 11px;
-    }
-    @media (max-width: 680px) {
-        font-size: 10px;
-    }
-    @media (max-width: 620px) {
-        font-size: 9px;
-    }
-    @media (max-width: 550px) {
-        font-size: 8px;
-    }
-    @media (max-width: 450px) {
-        font-size: 7px;
-    }
-    @media (max-width: 390px) {
-        font-size: 6px;
     }
     .content {
         display: flex;
         flex-direction: column;
-        align-items: flex-end;
         padding: 12em;
         .upper-part {
+            display: flex;
+            flex-direction: column;
+            align-self: flex-end;
             .top {
                 display: flex;
                 justify-content: flex-end;
@@ -52,26 +32,32 @@ section {
                 font-size: 6em;
             }
         }
+        .allCards {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding-top: 4em;
+        }
         .card {
-            position: absolute;
             background: url("/assets/image/comments/frontComment.png");
             background-repeat: no-repeat;
             background-size: 100% 100%;
             border-radius: 2em;
-            height: 32em;
-            width: 50em;
+            height: 42em;
+            width: 46em;
+
             .flex {
                 display: flex;
                 height: 100%;
                 flex-direction: column;
                 justify-content: space-between;
                 .text {
-                    margin: 4em;
+                    margin: 2em;
+                    font-size: 1.8em;
                 }
                 .bottom {
                     display: flex;
-                    padding: 0em 4em 2em 4em;
-                    margin-bottom: 2em;
+                    padding: 0em 4em 4em 4em;
                 }
             }
 
@@ -79,8 +65,8 @@ section {
                 position: absolute;
                 transition: opacity 0.3s ease-in-out;
                 opacity: 0;
-                height: 32em;
-                width: 50em;
+                height: 100%;
+                width: 100%;
             }
             &:hover {
                 z-index: 10;
@@ -90,87 +76,55 @@ section {
             }
         }
         .comment-one {
-            left: 15%;
-            bottom: 23%;
             z-index: 3;
             transform: rotate(-6deg);
         }
         .comment-two {
-            left: 35%;
-            bottom: 20%;
             z-index: 1;
         }
         .comment-three {
-            left: 55%;
-            bottom: 23%;
             z-index: 0;
             transform: rotate(6deg);
         }
     }
 }
 
-@media (max-width: 1180px) {
-    section {
-        .content {
-            .comment-one {
-                left: 12%;
-                bottom: 33%;
-                transform: rotate(-6deg);
-            }
-            .comment-two {
-                left: 32%;
-                bottom: 0%;
-                z-index: 1;
-            }
-            .comment-three {
-                left: 52%;
-                bottom: 33%;
-                transform: rotate(6deg);
-            }
+@media (max-width: 1160px) {
+    section .content {
+        padding: 12em 6em 12em 6em;
+        @media (max-width: 710px) {
+            padding: 10em 3em 10em 3em;
+        }
+        @media (max-width: 525px) {
+            padding: 10em 1em 10em 1em;
         }
     }
 }
-@media (max-width: 930px) {
-    section {
-        height: 170dvh;
-        @media (max-width: 680px) {
-            height: 140dvh;
+
+@media (max-width: 1039px) {
+    section .content {
+        .allCards {
+            gap: 6em;
         }
-        @media (max-width: 550px) {
-            height: 115dvh;
-        }
-        @media (max-width: 390px) {
-            height: 90dvh;
-        }
-        .content {
-            padding: 0em 6em 0em 6em;
-            @media (max-width: 550px) {
-                padding: 3em 3em 0em 3em;
-            }
-            .upper-part {
-                h2 {
-                    font-size: 5em;
-                    @media (max-width: 350px) {
-                        font-size: 4em;
-                    }
+        .upper-part {
+            h2 {
+                font-size: 5em;
+                @media (max-width: 555px) {
+                    font-size: 4em;
                 }
             }
-            .card {
-                transform: rotate(0deg);
-                transform: translate(-50%);
-            }
-            .comment-one {
-                left: 50%;
-                bottom: 65%;
-            }
-            .comment-two {
-                left: 50%;
-                bottom: 35%;
-            }
-            .comment-three {
-                left: 50%;
-                bottom: 5%;
-            }
+        }
+        .card {
+            transform: rotate(0deg);
+        }
+    }
+}
+@media (max-width: 480px) {
+    section .content .card {
+        height: 50em;
+        width: 40em;
+        @media(max-width: 340px){
+            height: 60em;
         }
     }
 }
