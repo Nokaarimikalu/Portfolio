@@ -17,3 +17,28 @@
     }
 }
 
+@media (max-width: 650px){
+    .icon{
+        margin: 15px;
+        img{
+            filter: grayscale(0);
+        }
+    }
+}
+@media (max-width: 530px){
+    .icon{
+        margin: 10px 10px;
+        img{
+            height: 60px;
+            width: 60px;
+        }
+        span{
+            font-size: 16px;
+        }
+    }
+}
+@media (max-width: 490px){
+    .icon{
+        margin: 10px 0px;
+    }
+}

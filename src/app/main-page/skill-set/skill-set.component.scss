@@ -34,19 +34,92 @@ section {
                 font-size: 16px;
             }
         }
-        .bottom-part{
+        .bottom-part {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 320px;
-            app-small-icons{
+            app-small-icons {
                 display: flex;
+                flex: 1;
                 flex-wrap: wrap;
-                width: 700px;
+                max-width: 700px;
             }
-            img{
+            img {
                 transform: rotate(15deg);
                 height: 200px;
+            }
+        }
+    }
+}
+@media (max-width: 1250px) {
+    section {
+        height: 130dvh;
+        .content {
+            .top-part {
+                align-items: center;
+                flex-direction: column;
+                .skill-set {
+                    align-items: center;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 960px) {
+    section {
+        background-size: cover;
+        .content {
+            .top-part {
+                .skill-set {
+                    padding-right: 0px;
+                }
+            }
+            .bottom-part {
+                flex-direction: column;
+                align-items: center;
+                img {
+                    margin-top: 40px;
+                }
+                app-small-icons {
+                    width: 640px;
+                    @media (max-width: 650px) {
+                        width: 520px;
+                    }
+                    @media (max-width: 530px) {
+                        width: 480px;
+                    }
+                    @media (max-width: 490px) {
+                        width: 400px;
+                    }
+                    @media (max-width: 399px) {
+                        width: 300px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 850px){
+    section{
+        height: 140dvh;
+        .content{
+            .top-part{
+                .introduction{
+                    width: 600px;
+                    height: 200px;
+                    @media(max-width: 640px){
+                        width: 400px;
+                        background-size: cover;
+                    }
+                    @media(max-width: 430px){
+                        width: 300px;
+                        height: 250px;
+                        
+                    }
+                }
             }
         }
     }

@@ -1,74 +1,176 @@
-section{
+section {
     height: 90dvh;
-    .content{
+    font-size: 10px;
+    @media (max-width: 1390px) {
+        font-size: 9px;
+    }
+    @media (max-width: 1250px) {
+        font-size: 8px;
+    }
+    @media (max-width: 1060px) {
+        font-size: 7px;
+    }
+    @media (max-width: 930px) {
+        font-size: 12px;
+    }
+    @media (max-width: 740px) {
+        font-size: 11px;
+    }
+    @media (max-width: 680px) {
+        font-size: 10px;
+    }
+    @media (max-width: 620px) {
+        font-size: 9px;
+    }
+    @media (max-width: 550px) {
+        font-size: 8px;
+    }
+    @media (max-width: 450px) {
+        font-size: 7px;
+    }
+    @media (max-width: 390px) {
+        font-size: 6px;
+    }
+    .content {
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-        padding: 120px;
-        .upper-part{
-            .top{
+        padding: 12em;
+        .upper-part {
+            .top {
                 display: flex;
                 justify-content: flex-end;
-                gap: 15px;
-                img{
-                    height: 40px;
+                gap: 1.5em;
+                img {
+                    height: 4em;
+                }
+                h3 {
+                    font-size: 2.4em;
                 }
             }
+            h2 {
+                font-size: 6em;
+            }
         }
-        .card{
+        .card {
             position: absolute;
             background: url("/assets/image/comments/frontComment.png");
             background-repeat: no-repeat;
             background-size: 100% 100%;
-            border-radius: 20px;
-            height: 320px;
-            width: 500px;
-            .flex{
+            border-radius: 2em;
+            height: 32em;
+            width: 50em;
+            .flex {
                 display: flex;
                 height: 100%;
                 flex-direction: column;
                 justify-content: space-between;
-                .text{
-                    margin: 40px;
+                .text {
+                    margin: 4em;
                 }
-                .bottom{
+                .bottom {
                     display: flex;
-                    padding: 0px 40px 20px 40px;
-                    margin-bottom: 20px;
+                    padding: 0em 4em 2em 4em;
+                    margin-bottom: 2em;
                 }
             }
 
-            
-            .hoverEffect{
-            position: absolute;
-            transition: opacity 0.3s ease-in-out;
-            opacity: 0;
-            height: 320px;
-            width: 500px;
+            .hoverEffect {
+                position: absolute;
+                transition: opacity 0.3s ease-in-out;
+                opacity: 0;
+                height: 32em;
+                width: 50em;
             }
             &:hover {
                 z-index: 10;
                 .hoverEffect {
-                opacity: 0.3;
+                    opacity: 0.3;
                 }
             }
         }
-        .comment-one{
+        .comment-one {
             left: 15%;
             bottom: 23%;
             z-index: 3;
             transform: rotate(-6deg);
         }
-        .comment-two{
+        .comment-two {
             left: 35%;
             bottom: 20%;
             z-index: 1;
         }
-        .comment-three{
+        .comment-three {
             left: 55%;
             bottom: 23%;
             z-index: 0;
             transform: rotate(6deg);
+        }
+    }
+}
+
+@media (max-width: 1180px) {
+    section {
+        .content {
+            .comment-one {
+                left: 12%;
+                bottom: 33%;
+                transform: rotate(-6deg);
+            }
+            .comment-two {
+                left: 32%;
+                bottom: 0%;
+                z-index: 1;
+            }
+            .comment-three {
+                left: 52%;
+                bottom: 33%;
+                transform: rotate(6deg);
+            }
+        }
+    }
+}
+@media (max-width: 930px) {
+    section {
+        height: 170dvh;
+        @media (max-width: 680px) {
+            height: 140dvh;
+        }
+        @media (max-width: 550px) {
+            height: 115dvh;
+        }
+        @media (max-width: 390px) {
+            height: 90dvh;
+        }
+        .content {
+            padding: 0em 6em 0em 6em;
+            @media (max-width: 550px) {
+                padding: 3em 3em 0em 3em;
+            }
+            .upper-part {
+                h2 {
+                    font-size: 5em;
+                    @media (max-width: 350px) {
+                        font-size: 4em;
+                    }
+                }
+            }
+            .card {
+                transform: rotate(0deg);
+                transform: translate(-50%);
+            }
+            .comment-one {
+                left: 50%;
+                bottom: 65%;
+            }
+            .comment-two {
+                left: 50%;
+                bottom: 35%;
+            }
+            .comment-three {
+                left: 50%;
+                bottom: 5%;
+            }
         }
     }
 }

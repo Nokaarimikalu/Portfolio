@@ -5,19 +5,23 @@
                 <h3>My Craft</h3>
                 <h2>Projects</h2>
                 <span>
-                    Encourage people to take a look and interact with your projects.
-                    Highlight your approach to creating responsive,
+                    Encourage people to take a look and interact with your
+                    projects. Highlight your approach to creating responsive,
                     user-friendly projects with efficient code.
                 </span>
             </div>
             @for (item of myProjects; track $index) {
-                <div class="template-project">
-                    <div class="image">
-                        <img src="{{item.url}}" alt="">
-                    </div>
-                        <h3>{{item.title}}</h3>
-                        <span>{{item.text}}</span>
+            <div class="template-project">
+                <div class="image">
+                    <img src="{{ item.url }}" alt="" />
+                    <button class="buttonOne">Project details</button>
                 </div>
+                <div class="titleForProject">
+                    <h3>{{ item.title }}</h3>
+                    <span>{{ item.text }}</span>
+                    <button class="buttonTwo">Project details</button>
+                </div>
+            </div>
             }
         </div>
     </div>
