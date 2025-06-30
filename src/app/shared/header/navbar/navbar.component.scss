@@ -3,8 +3,51 @@ nav {
     align-items: flex-end;
     justify-content: space-evenly;
     font-size: 2.4rem;
-    > a{
+    @media (max-width: 960px) {
+        font-size: 1.8rem;
+    }
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         color: white;
         font-weight: 600;
+        height: 40px;
+        width: 110px;
+    }
+    .first {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 40px;
+        width: 120px;
+        color: white;
+        font-weight: 600;
+        &.first::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("./../../../../../public/assets/image/header/aboutME.png");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            clip-path: inset(0 0 100% 0);
+            transition: clip-path 0.2s ease;
+        }
+        &.first:hover::before {
+            clip-path: inset(0 0 0 0);
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    nav {
+        height: 25dvh;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin: 20px 0 40px 0;
     }
 }

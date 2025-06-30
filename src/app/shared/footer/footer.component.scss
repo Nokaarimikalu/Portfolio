@@ -1,108 +1,194 @@
-.footer-section {
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    font-size: 10px;
+    padding: 12em 12em 8em 12em;
     background: url("/assets/image/footer/06_Contact.png");
     background-repeat: no-repeat;
     background-size: cover;
-
-    .content {
+    min-height: 100dvh;
+    .footer-part {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        color: white;
-        padding: 120px 120px 80px 120px;
-        .footer-part {
+        justify-content: space-between;
+        .left-part {
+            display: flex;
+            flex-direction: column;
+            width: 40%;
+            img {
+                display: flex;
+                flex: 1;
+                justify-self: flex-end;
+                height: 4em;
+                width: 20em;
+            }
+            h2 {
+                padding-bottom: 40px;
+            }
+            .spanTwo {
+                padding-bottom: 40px;
+            }
+        }
+        form {
+            width: 40%;
+            gap: 2em;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            textarea:focus,
+            input:focus {
+                outline: none;
+            }
+            #email,
+            #name {
+                height: 4em;
+            }
+            .inputfeld {
+                background: transparent;
+                border-top: none;
+                border-bottom: 1px solid gold;
+                border-left: none;
+                border-right: none;
+                color: white;
+                width: 100%;
+            }
+            #message {
+                resize: none;
+                height: 8em;
+            }
+            label {
+                font-size: 2em;
+                p {
+                    font-size: 1em;
+                }
+            }
+        }
+        .send-button {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            img {
+                display: none;
+                height: 3em;
+                width: 14em;
+            }
+            button {
+                padding: 1em 5em;
+                border-radius: 2em;
+            }
+        }
+    }
+    .bottom-part {
+        display: flex;
+        justify-content: space-between;
+        gap: 20%;
+        a {
+            color: white;
+            font-size: 1.6em;
+        }
+        .logoAndName {
+            h4 {
+                padding-bottom: 2em;
+            }
+            .footer-logo-img {
+                transition: filter 0.3s ease;
+                height: 5em;
+            }
+        }
+        .links {
             display: flex;
             justify-content: space-between;
-            height: 480px;
+            align-items: flex-end;
+            flex: 1;
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 1360px) {
+    .content {
+        padding: 12em 6em 12em 6em;
+        @media (max-width: 860px) {
+            padding: 10em 3em 10em 3em;
+        }
+    }
+}
+@media (max-width: 1200px) {
+    .content .footer-part {
+        flex-direction: column;
+        align-items: center;
+        .left-part {
+            width: 90%;
+            img {
+                display: none;
+            }
+            .spanTwo {
+                padding-bottom: 6em;
+            }
+        }
+        form {
+            width: 90%;
+        }
+        .send-button {
+            width: 100%;
+            justify-content: space-around;
+            padding-bottom: 8em;
+            img {
+                display: block;
+            }
+        }
+    }
+}
+@media (max-width: 520px) {
+    .content {
+        .footer-part {
             .left-part {
-                display: flex;
-                flex-direction: column;
-                width: 40%;
-                img {
-                    display: flex;
-                    flex: 1;
-                    justify-self: flex-end;
-                    height: 40px;
-                    width: 200px;
+                h3 {
+                    font-size: 2em;
                 }
                 h2 {
-                    padding-bottom: 40px;
+                    font-size: 4em;
                 }
-                .spanTwo {
-                    padding-bottom: 40px;
+                span {
+                    font-size: 1.4em;
                 }
             }
             form {
-                width: 40%;
-                gap: 20px;
-                display: flex;
-                align-items: center;
-                flex-direction: column;
-                textarea:focus,
-                input:focus {
-                    outline: none;
-                }
-                #email,
-                #name {
-                    height: 40px;
-                }
-                .inputfeld {
-                    background: transparent;
-                    border-top: none;
-                    border-bottom: 1px solid gold;
-                    border-left: none;
-                    border-right: none;
-                    color: white;
-                    width: 70%;
-                }
-                #message {
-                    resize: none;
-                    height: 80px;
-                }
                 label {
-                    font-size: 20px;
+                    font-size: 2em;
                     p {
-                        font-size: 14px;
+                        font-size: 0.6em;
                     }
                 }
-                .send-button {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    gap: 20px;
-                    img {
-                        display: none;
-                        height: 30px;
-                        width: 140px;
-                    }
-                    button {
-                        padding: 10px 50px;
-                        border-radius: 20px;
-                    }
+            }
+            .send-button {
+                img {
+                    width: 100px;
+                    height: 25px;
+                }
+                button {
+                    padding: 0.6em 2em;
                 }
             }
         }
         .bottom-part {
-            display: flex;
-            justify-content: space-between;
-            gap: 20%;
-            a {
-                color: white;
-                font-size: 16px;
-            }
+            flex-direction: column;
             .logoAndName {
-                img {
-                    height: 50px;
-                }
-                h4 {
-                    padding-bottom: 20px;
-                }
-            }
-            .links {
                 display: flex;
                 justify-content: space-between;
-                align-items: flex-end;
-                flex: 1;
-                width: 100%;
+                padding-bottom: 6em;
+                h4 {
+                    padding: 0.5em;
+                }
+                .footer-name {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+                }
+                .footer-logo-img:hover {
+                    filter: sepia(100%) saturate(10000%) hue-rotate(280deg);
+                }
             }
         }
     }

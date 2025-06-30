@@ -1,0 +1,43 @@
+ .language-toggle {
+        display: flex;
+        width: 150px;
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
+        font-family: sans-serif;
+        .lang {
+            font-weight: bold;
+            font-size: 1.5em;
+            color: #bbb;
+            transition: color 0.3s;
+            &.active {
+                color: #f77d5c;
+            }
+        }
+        .toggle-switch {
+            width: 60px;
+            height: 28px;
+            background-color: #f77d5c;
+            border-radius: 50px;
+            padding: 4px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            border: 2px solid white;
+            justify-content: flex-start;
+
+            &.active {
+                justify-content: flex-end;
+            }
+
+            .circle {
+                width: 20px;
+                height: 20px;
+                background-color: #3b82f6;
+                border-radius: 50%;
+                transition: transform 0.3s;
+            }
+        }
+    }
+
