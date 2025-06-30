@@ -8,7 +8,6 @@
     background: url("/assets/image/footer/06_Contact.png");
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 100dvh;
     .footer-part {
         display: flex;
         justify-content: space-between;
@@ -25,9 +24,14 @@
             }
             h2 {
                 padding-bottom: 40px;
+                hyphens: auto;
+                overflow-wrap: break-word;
             }
             .spanTwo {
                 padding-bottom: 40px;
+            }
+            span {
+                word-break: break-word;
             }
         }
         form {
@@ -82,7 +86,7 @@
     .bottom-part {
         display: flex;
         justify-content: space-between;
-        gap: 20%;
+        gap: 4em;
         a {
             color: white;
             font-size: 1.6em;

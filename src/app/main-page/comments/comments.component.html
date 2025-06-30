@@ -3,73 +3,35 @@
         <div class="upper-part">
             <div class="top">
                 <img src="/assets/image/comments/arrowLeft.png" alt="" />
-                <h3>In their Words:</h3>
+                <h3>{{ "comments.headingSmall" | translate }}</h3>
             </div>
-            <h2>Colleagues Thoughts</h2>
+            <h2>{{ "comments.headingBig" | translate }}</h2>
         </div>
-        <div class="allCards"> 
-            <div class="card comment-one">
+        <div class="allCards">
+            @for (item of Comments; track $index) {
+            <div class="card comment-{{ item.class }}">
                 <div class="flex">
                     <img
                         class="hoverEffect"
-                        src="/assets/image/comments/image.png"
+                        src="/assets/image/comments/gelbeStreifen.png"
                         alt=""
                     />
-                    <div class="text">{{ CommentOne.text }}</div>
+                    <div class="text">{{ item.text | translate }}</div>
                     <div class="bottom">
                         <div class="nameAndWork">
-                            <h3>{{ CommentOne.name }}</h3>
-                            <h4>{{ CommentOne.work }}</h4>
+                            <h3>{{ item.name | translate }}</h3>
+                            <h4>{{ item.work | translate }}</h4>
                         </div>
                         <div class="linkedIn">
-                            <img src="" alt="" />
-                            <a href=""><span>Profile</span></a>
+                            <div class="images"></div>
+                            <a href="{{ item.profileLink }}">{{
+                                "comments.profile" | translate
+                            }}</a>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <div class="card comment-two">
-                <div class="flex">
-                    <img
-                        class="hoverEffect"
-                        src="/assets/image/comments/image.png"
-                        alt=""
-                    />
-                    <div class="text">{{ CommentTwo.text }}</div>
-                    <div class="bottom">
-                        <div class="nameAndWork">
-                            <h3>{{ CommentTwo.name }}</h3>
-                            <h4>{{ CommentTwo.work }}</h4>
-                        </div>
-                        <div class="linkedIn">
-                            <img src="" alt="" />
-                            <a href=""><span>Profile</span></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card comment-three">
-                <div class="flex">
-                    <img
-                        class="hoverEffect"
-                        src="/assets/image/comments/image.png"
-                        alt=""
-                    />
-                    <div class="text">{{ CommentThree.text }}</div>
-                    <div class="bottom">
-                        <div class="nameAndWork">
-                            <h3>{{ CommentThree.name }}</h3>
-                            <h4>{{ CommentThree.work }}</h4>
-                        </div>
-                        <div class="linkedIn">
-                            <img src="" alt="" />
-                            <a href=""><span>Profile</span></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            }
         </div>
     </div>
 </section>

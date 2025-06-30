@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
+import { TranslatePipe } from '@ngx-translate/core';
 
 interface Comments {
+    class: string;
     text: string;
     name: string;
     work: string;
@@ -9,30 +11,32 @@ interface Comments {
 
 @Component({
     selector: 'app-comments',
-    imports: [],
+    imports: [TranslatePipe],
     templateUrl: './comments.component.html',
     styleUrl: './comments.component.scss',
 })
 export class CommentsComponent {
-    CommentOne: Comments = 
+    Comments: Comments[] = [
         {
-            text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi, nostrum molestiae. Suscipit eius, dignissimos earum incidunt dolorem nisi cupiditate ipsum laudantium ratione eaque iste iure iusto debitis corporis voluptas culpa!",
-            name: "Keven Gebauer",
-            work: "Frontend Developer",
-            profileLink: "#"
-        }
-    CommentTwo: Comments = 
+            class: 'one',
+            text: 'comments.keven.text',
+            name: 'comments.keven.name',
+            work: 'comments.keven.work',
+            profileLink: '#',
+        },
         {
-            text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi, nostrum molestiae. Suscipit eius, dignissimos earum incidunt dolorem nisi cupiditate ipsum laudantium ratione eaque iste iure iusto debitis corporis voluptas culpa!",
-            name: "Essma",
-            work: "Frontend Developer",
-            profileLink: "#"
-        }
-    CommentThree: Comments = 
+            class: 'two',
+            text: 'comments.essma.text',
+            name: 'comments.essma.name',
+            work: 'comments.essma.work',
+            profileLink: '#',
+        },
         {
-            text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi, nostrum molestiae. Suscipit eius, dignissimos earum incidunt dolorem nisi cupiditate ipsum laudantium ratione eaque iste iure iusto debitis corporis voluptas culpa!!",
-            name: "WIllstma ",
-            work: "Frontend Developer",
-            profileLink: "#"
-        }
+            class: 'three',
+            text: 'comments.willstma.text',
+            name: 'comments.willstma.name',
+            work: 'comments.willstma.work',
+            profileLink: '#',
+        },
+    ];
 }

@@ -3,42 +3,99 @@ nav {
     align-items: flex-end;
     justify-content: space-evenly;
     font-size: 2.4rem;
+
     @media (max-width: 960px) {
         font-size: 1.8rem;
     }
+
     a {
         display: flex;
         align-items: center;
         justify-content: center;
         color: white;
         font-weight: 600;
-        height: 40px;
-        width: 110px;
+        position: relative;
+        z-index: 1;
     }
-    .first {
+    .first, .second, .third, .fourth {
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 40px;
-        width: 120px;
+        height: 42px;
+        width: 130px;
         color: white;
         font-weight: 600;
-        &.first::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-image: url("./../../../../../public/assets/image/header/aboutME.png");
-            background-repeat: no-repeat;
-            background-size: 100% 100%;
-            clip-path: inset(0 0 100% 0);
-            transition: clip-path 0.2s ease;
-        }
-        &.first:hover::before {
-            clip-path: inset(0 0 0 0);
-        }
+        position: relative;
+        overflow: hidden; 
+        cursor: pointer;
+    }
+
+    .first::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url("./../../../../../public/assets/image/header/aboutME.png");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        clip-path: inset( 0 0 100% 0 );
+        transition: clip-path 0.2s ease;
+    }
+    .first:hover::before {
+        clip-path: inset(0 0 0 0);
+    }
+
+    .second::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url("./../../../../../public/assets/image/header/skills.png");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        clip-path: inset(100% 0 0 0);
+        transition: clip-path 0.4s ease;
+    }
+    .second:hover::before {
+        clip-path: inset(0 0 0 0);
+    }
+
+    .third::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url("./../../../../../public/assets/image/header/projects.png");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        clip-path: inset(100% 0 0 0);
+        transition: clip-path 0.4s ease;
+    }
+    .third:hover::before {
+        clip-path: inset(0 0 0 0);
+    }
+
+    .fourth::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url("./../../../../../public/assets/image/header/contact.png");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        clip-path: inset( 0 100% 0 0);
+        transition: clip-path 0.2s ease;
+    }
+    .fourth:hover::before {
+        clip-path: inset(0 0 0 0);
     }
 }
 

@@ -1,0 +1,91 @@
+{
+    "nav": {
+        "about": "Über mich",
+        "skills": "Fähigkeiten",
+        "projects": "Projekte",
+        "contact": "Kontakt"
+    },
+    "hero": {
+        "hello": "Hallo Welt",
+        "contact": "Kontakt aufnehmen"
+    },
+    "about-me": {
+        "location": "Wohnort in Schwabhausen",
+        "relocation": "Bereit Umzuziehen",
+        "remote": "Offen für Remote-Arbeit",
+        "who": "Wer ist Pascal?",
+        "title": "Über mich",
+        "text": "Hallo! Ich bin Pascal. Ich war schon immer begeistert davon, mit dem Computer zu arbeiten – besonders was mit IT zu tun hat. Für mich ist Technologie nicht nur ein Werkzeug, sondern ein kreativer Spielplatz, auf dem ich eigene Ideen umsetzen und Neues erschaffen kann. Herausforderungen treiben mich besonders an. Jedes Problem ist ein Rätsel, das ich gern löse – das motiviert mich, ständig dazuzulernen und bessere, elegantere Lösungen zu finden.<br><br>Lass uns zusammen etwas Großartiges erschaffen!",
+        "button": "Lass uns reden"
+    },
+    "skill-set": {
+        "stack": "MEIN STACK",
+        "skill": "Skillet",
+        "text": "Ich habe mehrere Projekte umgesetzt und dabei meine Frontend-Skills mit HTML, CSS und JavaScript vertieft. Auch mit Angular und TypeScript schreibe ich sauberen Code. APIs und Git gehören für mich zum Alltag, sodass ich Projekte effizient manage."
+    },
+    "COMMENTS": {
+        "IN_THEIR_WORDS": "In ihren Worten:",
+        "COLLEAGUES_THOUGHTS": "Gedanken der Kollegen"
+    },
+    "contactMe": {
+        "title": "KONTAKTIERE MICH",
+        "subtitle": "Bereit, zusammenzuarbeiten?",
+        "description1": "Ermutige Menschen, dich zu kontaktieren, und beschreibe, für welche Rolle du dich interessierst. Zeige Vertrauen in deine Fähigkeit, durch deine Expertise und Begeisterung einen wertvollen Beitrag im Team zu leisten.",
+        "description2": "Zeige Interesse daran, zu einem neuen Projekt beizutragen, und hebe dabei den Wert und die Fähigkeiten hervor, die du mitbringst.",
+        "form": {
+            "nameLabel": "Wie heißt du?",
+            "namePlaceholder": "Dein Name hier",
+            "emailLabel": "Wie lautet deine E-Mail?",
+            "emailPlaceholder": "deineemail@gmail.com",
+            "messageLabel": "Wie kann ich dir helfen?",
+            "messagePlaceholder": "Hallo Pascal, ich interessiere mich für...",
+            "privacyText": "Ich habe die <a href=\"#\">Datenschutzbestimmungen</a> gelesen und stimme der Verarbeitung meiner Daten zu.",
+            "sendButton": "Senden"
+        },
+        "footer": {
+            "copyright": "© Pascal Fliedner",
+            "legalNotice": "Impressum",
+            "links": {
+                "github": "GitHub",
+                "linkedin": "LinkedIn",
+                "email": "E-Mail"
+            }
+        }
+    },
+    "myProjects": {
+        "join": {
+            "title": "Join",
+            "text": "Task-Manager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben mit Drag-and-Drop, weise Nutzer und Kategorien zu."
+        },
+        "elPollo": {
+            "title": "El Pollo Loco",
+            "text": "Ein Jump-and-Run-Wurfspiel auf objektorientierter Basis. Hilf Pepe, Münzen und Tabasco zu sammeln, um gegen das verrückte Huhn zu kämpfen."
+        },
+        "pokedex": {
+            "title": "Pokédex",
+            "text": "Ein Projekt, das eine API nutzt, um detaillierte Informationen über Pokémon anzuzeigen – wie Statuswerte, Typen und Fähigkeiten."
+        },
+        "projectDetails": "Projektdetails"
+    },
+    "comments": {
+        "headingSmall": "Mit ihren Worten:",
+        "headingBig": "Gedanken von Kollegen",
+        "profile": "Profil",
+
+        "keven": {
+            "text": "Kevens Feedback kommt hierhin. Es kann ein langer oder kurzer Kommentar sein.",
+            "name": "Keven Gebauer",
+            "work": "Frontend Entwickler"
+        },
+        "essma": {
+            "text": "Essmas Feedback kommt hierhin. Es kann ein langer oder kurzer Kommentar sein.",
+            "name": "Essma",
+            "work": "Frontend Entwicklerin"
+        },
+        "willstma": {
+            "text": "Willstmas Feedback kommt hierhin. Es kann ein langer oder kurzer Kommentar sein.",
+            "name": "WIllstma",
+            "work": "Frontend Entwickler"
+        }
+    }
+}

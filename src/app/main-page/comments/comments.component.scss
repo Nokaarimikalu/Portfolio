@@ -3,10 +3,10 @@ section {
     @media (max-width: 420px) {
         font-size: 9px;
     }
-        @media (max-width: 380px) {
+    @media (max-width: 380px) {
         font-size: 8px;
     }
-            @media (max-width: 340px) {
+    @media (max-width: 340px) {
         font-size: 7px;
     }
     .content {
@@ -57,7 +57,34 @@ section {
                 }
                 .bottom {
                     display: flex;
+                    justify-content: space-between;
                     padding: 0em 4em 4em 4em;
+                    .linkedIn {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        &:hover{
+                            a{
+                                color: white;
+                            }
+                            .images{
+                                content: url("./../../../../public/assets/image/comments/whiteLinkedIn.png");
+                            }
+                        }
+                        .images {
+                            height: 30px;
+                            content: url("./../../../../public/assets/image/comments/blackLinkedIn.png");
+                        }
+                        a {
+                            font-size: 20px;
+                            color: black;
+                        }
+                    }
+                    &:hover{
+                        .nameAndWork{
+                            color: white;
+                        }
+                    }
                 }
             }
 
@@ -123,7 +150,7 @@ section {
     section .content .card {
         height: 50em;
         width: 40em;
-        @media(max-width: 340px){
+        @media (max-width: 340px) {
             height: 60em;
         }
     }

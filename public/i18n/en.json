@@ -1,0 +1,91 @@
+{
+    "nav": {
+        "about": "About me",
+        "skills": "Skills",
+        "projects": "Projects",
+        "contact": "Contact"
+    },
+    "hero": {
+        "hello": "Hello world",
+        "contact": "Get in Touch"
+    },
+    "about-me": {
+        "location": "Based in Schwabhausen",
+        "relocation": "Open to relocate",
+        "remote": "Open to work remote",
+        "who": "Who's Pascal?",
+        "title": "About me",
+        "text": "Hey there, I’m Pascal. I’ve always been passionate about working with computers — especially anything IT-related. For me, technology is not just a tool, but a creative playground where I can build things from scratch and bring my ideas to life. I’m especially driven by challenges. Every problem is a puzzle I enjoy solving — it motivates me to keep learning, growing, and finding smarter, more elegant solutions.<br> <br> Let’s connect and create something awesome together!",
+        "button": "Let's talk"
+    },
+    "skill-set": {
+        "stack": "MY STACK",
+        "skill": "Skill set",
+        "text": "I’ve completed several projects, strengthening my frontend skills with HTML, CSS, and JavaScript. I write clean code in Angular and TypeScript. Working with APIs and Git is part of my daily workflow to manage projects efficiently."
+    },
+    "COMMENTS": {
+        "IN_THEIR_WORDS": "In their Words:",
+        "COLLEAGUES_THOUGHTS": "Colleagues Thoughts"
+    },
+    "contactMe": {
+        "title": "CONTACT ME",
+        "subtitle": "Ready to work together?",
+        "description1": "Encourage people to contact you and describe what role you are interested in. Express confidence in your ability to make a meaningful contribution to a team through your expertise and enthusiasm for improving your skills.",
+        "description2": "Show interest in contributing to a new project, while highlighting the value and skills you can bring to the table.",
+        "form": {
+            "nameLabel": "What's your name?",
+            "namePlaceholder": "Your name goes here",
+            "emailLabel": "What's your email?",
+            "emailPlaceholder": "youremail@gmail.com",
+            "messageLabel": "How can I help you?",
+            "messagePlaceholder": "Hello Pascal, I am interested in...",
+            "privacyText": "I've read the <a href=\"#\">privacy policy</a> and agree to the processing of my data as outlined.",
+            "sendButton": "Send"
+        },
+        "footer": {
+            "copyright": "© Pascal Fliedner",
+            "legalNotice": "Legal Notice",
+            "links": {
+                "github": "GitHub",
+                "linkedin": "LinkedIn",
+                "email": "Email"
+            }
+        }
+    },
+    "myProjects": {
+        "join": {
+            "title": "Join",
+            "text": "Task manager inspired by the Kanban System. Create and organize tasks using a drag and drop functions, assign users and categories."
+        },
+        "elPollo": {
+            "title": "El Pollo Loco",
+            "text": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen."
+        },
+        "pokedex": {
+            "title": "Pokedex",
+            "text": "A project that uses an API to display detailed Pokémon info — like stats, types, and abilities — all in one place."
+        },
+        "projectDetails": "Project details"
+    },
+    "comments": {
+        "headingSmall": "In their Words:",
+        "headingBig": "Colleagues Thoughts",
+        "profile": "Profile",
+
+        "keven": {
+            "text": "Keven's feedback goes here. It can be a long comment or short.",
+            "name": "Keven Gebauer",
+            "work": "Frontend Developer"
+        },
+        "essma": {
+            "text": "Essma's feedback goes here. It can be a long comment or short.",
+            "name": "Essma",
+            "work": "Frontend Developer"
+        },
+        "willstma": {
+            "text": "Willstma's feedback goes here. It can be a long comment or short.",
+            "name": "WIllstma",
+            "work": "Frontend Developer"
+        }
+    }
+}

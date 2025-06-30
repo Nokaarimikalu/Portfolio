@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {TranslatePipe} from "@ngx-translate/core";
 
 interface Project {
     url: string;
@@ -8,7 +9,7 @@ interface Project {
 
 @Component({
     selector: 'app-my-projects',
-    imports: [],
+    imports: [TranslatePipe],
     templateUrl: './my-projects.component.html',
     styleUrl: './my-projects.component.scss',
 })
@@ -16,18 +17,18 @@ export class MyProjectsComponent {
     myProjects: Project[] = [
         {
             url: '/assets/image/myprojects/join.png',
-            title: 'Join',
-            text: 'Task manager inspired by the Kanban System. Create and organize tasks using a drag and drop functions, assign users and categories',
+            title: 'myProjects.join.title',
+            text: 'myProjects.join.text',
         },
         {
             url: '/assets/image/myprojects/pepe.png',
-            title: 'El Pollo Loco',
-            text: 'Jump, run and throw game based on objext-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
+            title: 'myProjects.elPollo.title',
+            text: 'myProjects.elPollo.text',
         },
         {
             url: '/assets/image/myprojects/pokedex.png',
-            title: 'Pokedex',
-            text: 'A project that uses an API to display detailed Pokémon info — like stats, types, and abilities — all in one place.',
+            title: 'myProjects.pokedex.title',
+            text: 'myProjects.pokedex.text',
         },
     ];
 }

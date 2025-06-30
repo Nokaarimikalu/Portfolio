@@ -70,7 +70,7 @@ section {
 @media (max-width: 1300px) {
     section {
         font-size: 8px;
-        @media (max-width: 550px){
+        @media (max-width: 590px){
             height: 110dvh;
             font-size: 7px;
         }
@@ -83,9 +83,7 @@ section {
                 gap: 9em;
             }
             .right-part{
-                @media(max-width: 900px){
-                    width: 60%;
-                }
+                    width: 80%;
                 @media(max-width: 550px){
                     width: 80%;
                 }

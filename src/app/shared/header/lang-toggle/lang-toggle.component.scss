@@ -1,4 +1,4 @@
- .language-toggle {
+.language-toggle {
         display: flex;
         width: 150px;
         justify-content: center;
@@ -6,6 +6,7 @@
         gap: 1em;
         font-family: sans-serif;
         .lang {
+            cursor: pointer;
             font-weight: bold;
             font-size: 1.5em;
             color: #bbb;

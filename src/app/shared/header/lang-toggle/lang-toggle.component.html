@@ -1,15 +1,14 @@
 <div class="language-toggle">
-    <span class="lang en" [class.active]="!isDeActive" (click)="toggleEN()"
+    <span class="lang en" [class.active]="!isDeActive" (click)="toggleEN('en')"
         >EN</span
     >
     <div
         class="toggle-switch"
         [class.active]="isDeActive"
-        (click)="toggleLanguage()"
     >
         <div class="circle"></div>
     </div>
-    <span class="lang de" [class.active]="isDeActive" (click)="toggleDE()"
+    <span class="lang de" [class.active]="isDeActive" (click)="toggleDE('de')"
         >DE</span
     >
 </div>

@@ -1,59 +1,56 @@
 <div class="content">
     <div class="footer-part">
         <div class="left-part">
-            <h3>CONTACT ME</h3>
-            <h2>Ready to work together?</h2>
+            <h3>{{"contactMe.title"  | translate }}</h3>
+            <h2>{{"contactMe.subtitle"  | translate }}</h2>
             <span>
-                Encourage people to contaxt you and descreibe what role you are
-                interesred in. Express confidence in your ability to make a
-                meaningful contribution to a team through your ezpertise and
-                enthusiam for improving your skills.
+                {{"contactMe.description1"  | translate }}
             </span>
             <span class="spanTwo">
-                Show interest in controbuting to a new project, while
-                highlighting the value and skills you can bring to the table.
+                {{"contactMe.description2"  | translate }}
             </span>
             <div>
                 <img src="/assets/image/footer/rightArrow.png" alt="" />
             </div>
         </div>
         <form>
-            <label for="name">What's your name?</label>
+            <label for="name">{{"contactMe.form.nameLabel"  | translate }}</label>
             <input
                 class="inputfeld"
                 type="text"
                 id="name"
                 name="name"
-                placeholder="Your name goes here"
+                required
+                [placeholder]="'contactMe.form.namePlaceholder' | translate"
             />
 
-            <label for="email">What's your email?</label>
+            <label for="email">{{"contactMe.form.emailLabel"  | translate }}</label>
             <input
                 class="inputfeld"
                 type="email"
                 id="email"
                 name="email"
-                placeholder="youremail@gmail.com"
+                required
+                pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+                [placeholder]="'contactMe.form.emailPlaceholder' | translate"
             />
 
-            <label for="message">How can I help you?</label>
+            <label for="message">{{"contactMe.form.messageLabel"  | translate }}</label>
             <textarea
                 class="inputfeld"
                 id="message"
                 name="message"
-                placeholder="Hello Pascal, I am interested in..."
+                required
+                [placeholder]="'contactMe.form.messagePlaceholder' | translate"
             ></textarea>
 
             <label class="checkbox">
-                <p>
-                    <input type="checkbox" id="privacy" name="privacy" />
-                    I've read the <a href="#">privacy policy</a> and agree to
-                    the processing of my data as outlined.
-                </p>
+                <p [innerHTML]="'contactMe.form.privacyText' | translate"></p>
+                <input type="checkbox" id="privacy" name="privacy" />
             </label>
                     <div class="send-button">
                 <img src="/assets/image/footer/rightArrow.png" alt="" />
-                <button type="submit" disabled>Send</button>
+                <button type="submit" >{{ 'contactMe.form.sendButton' | translate }}</button>
             </div>
         </form>
 
@@ -64,15 +61,15 @@
                 <img class="footer-logo-img" src="/assets/image/header/whiteLogo.png" alt="" />
             </div>
             <div class="footer-name">
-                <h4>© Pascal Fliedner</h4>
-                <a href="">Legal Notice</a>
+                <h4>{{"contactMe.footer.copyright"| translate}}</h4>
+                <a href="">{{"contactMe.footer.legalNotice"| translate}}</a>
             </div>
 
         </div>
         <div class="links">
-            <a href="">GitHub</a>
-            <a href="">LinkedIn</a>
-            <a href="">Email</a>
+            <a href="">{{"contactMe.footer.links.github"| translate}}</a>
+            <a href="">{{"contactMe.footer.links.linkedin"| translate}}</a>
+            <a href="">{{"contactMe.footer.links.email"| translate}}</a>
         </div>
     </div>
 </div>

@@ -13,13 +13,17 @@
             @for (item of myProjects; track $index) {
             <div class="template-project">
                 <div class="image">
-                    <img src="{{ item.url }}" alt="" />
-                    <button class="buttonOne">Project details</button>
+                    <img [src]="item.url" alt="" />
+                    <button class="buttonOne">
+                        {{ "myProjects.projectDetails" | translate }}
+                    </button>
                 </div>
                 <div class="titleForProject">
-                    <h3>{{ item.title }}</h3>
-                    <span>{{ item.text }}</span>
-                    <button class="buttonTwo">Project details</button>
+                    <h3>{{ item.title | translate }}</h3>
+                    <span>{{ item.text | translate }}</span>
+                    <button class="buttonTwo">
+                        {{ "myProjects.projectDetails" | translate }}
+                    </button>
                 </div>
             </div>
             }
