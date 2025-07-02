@@ -14,7 +14,7 @@
             <div class="template-project">
                 <div class="image">
                     <img [src]="item.url" alt="" />
-                    <button class="buttonOne">
+                    <button [routerLink]="['/fullProject']" class="buttonOne" >
                         {{ "myProjects.projectDetails" | translate }}
                     </button>
                 </div>

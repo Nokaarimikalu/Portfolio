@@ -2,16 +2,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
-    background-color: #111111;
-    top: 0;
     z-index: 9999;
     height: 8dvh;
     padding-top: 12px;
     .logo {
         height: 60px;
         width: 120px;
-        background-image: url("/assets/image/header/whiteLogo.png");
+        background-image: url("./../../../../public/assets/image/header/whiteLogo.png");
         background-size: 60px 60px;
         background-repeat: no-repeat;
         background-position: center;
@@ -58,7 +55,7 @@
         left: 0;
         width: 100%;
         height: 70vh;
-        background-image: url("/assets/image/hero/01_Hero.png");
+        background-image: url("./../../../../public/assets/image/hero/01_Hero.png");
         background-repeat: no-repeat;
         background-size: 100% 100%;
         transition: top 0.4s ease;
@@ -93,7 +90,7 @@
 }
 @media (min-width: 700px){
     .content{
-        .slide-menu {
+        .slide-menu-open{
             display: none;
         }
     }

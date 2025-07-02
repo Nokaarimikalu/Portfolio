@@ -57,8 +57,8 @@ nav {
         background-image: url("./../../../../../public/assets/image/header/skills.png");
         background-repeat: no-repeat;
         background-size: 100% 100%;
-        clip-path: inset(100% 0 0 0);
-        transition: clip-path 0.4s ease;
+        clip-path: inset(0  100% 0 0);
+        transition: clip-path 0.2s ease;
     }
     .second:hover::before {
         clip-path: inset(0 0 0 0);
@@ -74,7 +74,7 @@ nav {
         background-image: url("./../../../../../public/assets/image/header/projects.png");
         background-repeat: no-repeat;
         background-size: 100% 100%;
-        clip-path: inset(100% 0 0 0);
+        clip-path: inset(0 100% 0 0);
         transition: clip-path 0.4s ease;
     }
     .third:hover::before {

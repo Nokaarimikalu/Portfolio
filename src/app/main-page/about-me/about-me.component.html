@@ -2,25 +2,28 @@
     <div class="content">
         <div class="left-part">
             <div class="left-images-one all-images">
-                <img src="/assets/image/aboutMe/located.png" alt="" />
+                <img src="assets/image/aboutMe/located.png" alt="" />
                 <p>{{"about-me.location" |translate }}</p>
             </div>
             <div class="left-images-two all-images">
-                <img src="/assets/image/aboutMe/relocate.png" alt="" />
+                <img src="assets/image/aboutMe/relocate.png" alt="" />
                 <p>{{"about-me.relocation" |translate }}</p>
             </div>
             <div class="left-images-three all-images">
-                <img src="/assets/image/aboutMe/homeoffice.png" alt="" />
+                <img src="assets/image/aboutMe/homeoffice.png" alt="" />
                 <p>{{"about-me.remote" |translate }}</p>
             </div>
         </div>
         <div class="right-part">
             <h3>{{"about-me.who" |translate }}</h3>
-            <h2>{{"about-me.title" |translate }}</h2>
+            <div class="test">
+                <div class="htwo"><h2>{{"about-me.title" |translate }}</h2></div>
+                <div class="image"><img src="assets/image/aboutMe/blueLine.png" alt=""></div>
+            </div>
             <div class="text">
                 <p [innerHTML]="'about-me.text' | translate"></p>
                 <button>{{"about-me.button" |translate }}</button>
             </div>
         </div>
-    </div>
+    </div>`
 </section>

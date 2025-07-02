@@ -14,35 +14,35 @@ interface Icon {
 export class SmallIconsComponent {
     icons: Icon[] = [
         {
-            url: '/assets/image/skill-set/small-icons/HTML.png',
+            url: 'assets/image/skill-set/small-icons/HTML.png',
             name: 'HTML' 
         },
         {
-            url: '/assets/image/skill-set/small-icons/CSS.png', 
+            url: 'assets/image/skill-set/small-icons/CSS.png', 
             name: 'CSS' 
         },
         {
-            url: '/assets/image/skill-set/small-icons/JavaScript.png',
+            url: 'assets/image/skill-set/small-icons/JavaScript.png',
             name: 'JavaScript',
         },
         {
-            url: '/assets/image/skill-set/small-icons/TypeScript.png',
+            url: 'assets/image/skill-set/small-icons/TypeScript.png',
             name: 'TypeScript',
         },
         {
-            url: '/assets/image/skill-set/small-icons/Angular.png',
+            url: 'assets/image/skill-set/small-icons/Angular.png',
             name: 'Angular',
         },
         {
-            url: '/assets/image/skill-set/small-icons/Firebase.png',
+            url: 'assets/image/skill-set/small-icons/Firebase.png',
             name: 'Firebase',
         },
         { 
-            url: '/assets/image/skill-set/small-icons/Git.png', 
+            url: 'assets/image/skill-set/small-icons/Git.png', 
             name: 'Git' 
         },
         { 
-            url: '/assets/image/skill-set/small-icons/API.png', 
+            url: 'assets/image/skill-set/small-icons/API.png', 
             name: 'API' 
         },
     ];

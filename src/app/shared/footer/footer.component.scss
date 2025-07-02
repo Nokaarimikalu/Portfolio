@@ -5,7 +5,7 @@
     color: white;
     font-size: 10px;
     padding: 12em 12em 8em 12em;
-    background: url("/assets/image/footer/06_Contact.png");
+    background: url("./../../../../public/assets/image/footer/06_Contact.png");
     background-repeat: no-repeat;
     background-size: cover;
     .footer-part {
@@ -56,6 +56,10 @@
                 border-right: none;
                 color: white;
                 width: 100%;
+                &::placeholder {
+                    color: white;
+                    font-size: 20px;
+                }
             }
             #message {
                 resize: none;
@@ -92,12 +96,17 @@
             font-size: 1.6em;
         }
         .logoAndName {
+            width: 20%;
             h4 {
                 padding-bottom: 2em;
             }
             .footer-logo-img {
                 transition: filter 0.3s ease;
                 height: 5em;
+            }
+            .legalNotice {
+                width: 100%;
+                position: relative; 
             }
         }
         .links {
@@ -182,6 +191,7 @@
                 display: flex;
                 justify-content: space-between;
                 padding-bottom: 6em;
+                width: 100%;
                 h4 {
                     padding: 0.5em;
                 }
@@ -189,6 +199,12 @@
                     display: flex;
                     flex-direction: column;
                     align-items: flex-end;
+                    width: 100%;
+                    .legalNotice {
+                        display: flex;
+                        justify-content: flex-end;
+                        padding-top: 20px;
+                    }
                 }
                 .footer-logo-img:hover {
                     filter: sepia(100%) saturate(10000%) hue-rotate(280deg);

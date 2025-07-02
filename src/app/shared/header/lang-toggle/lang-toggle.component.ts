@@ -3,7 +3,7 @@ import { TranslateDirective, TranslateService, TranslatePipe } from '@ngx-transl
 
 @Component({
     selector: 'app-lang-toggle',
-    imports: [ TranslateDirective, TranslatePipe],
+    imports: [],
     templateUrl: './lang-toggle.component.html',
     styleUrl: './lang-toggle.component.scss',
 })

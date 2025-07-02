@@ -13,7 +13,7 @@
     font-family: "Bricolage Grotesque";
     font-style: normal;
     font-weight: 400;
-    src: url("/assets/fonts/bricolage-grotesque-v8-latin-regular.woff2")
+    src: url("./../public/assets/fonts/bricolage-grotesque-v8-latin-regular.woff2")
         format("woff2");
 }
 @font-face {
@@ -21,7 +21,7 @@
     font-family: "Kalam";
     font-style: normal;
     font-weight: 400;
-    src: url("/assets/fonts/Kalam-Regular.ttf") format("woff2");
+    src: url("./../public/assets/fonts/Kalam-Regular.ttf") format("woff2");
 }
 
 /* Hide scrollbar for IE, Edge and Firefox */
@@ -75,3 +75,26 @@ span {
 button {
     cursor: pointer;
 }
+
+@keyframes boomerang {
+    0% {
+        clip-path: inset(0 100% 0 0);
+    }
+    20% {
+        clip-path: inset(0 0 0 0);
+    }
+    40% {
+        clip-path: inset(0 0 0 0);
+    }
+    60% {
+        clip-path: inset(0 100% 0 0);
+    }
+    80% {
+        clip-path: inset(0 100% 0 0);
+    }
+    100% {
+        clip-path: inset(0 100% 0 0);
+    }
+}
+
+

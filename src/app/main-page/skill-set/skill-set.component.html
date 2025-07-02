@@ -1,17 +1,22 @@
 <section>
     <div class="content">
         <div class="top-part">
-        <div class="skill-set">
-            <h3>{{"skill-set.stack" |translate }}</h3>
-            <h2>{{"skill-set.skill" |translate }}</h2>
+            <div class="skill-set">
+                <h3>{{ "skill-set.stack" | translate }}</h3>
+                <div class="skillsetImage">
+                    <div class="animatedBackground"></div>
+                    <h2>{{ "skill-set.skill" | translate }}</h2>
+                </div>
+            </div>
+            <div class="introduction">
+                <p>{{ "skill-set.text" | translate }}</p>
+            </div>
         </div>
-        <div class="introduction">
-            <p>{{"skill-set.text" |translate }}</p>
-        </div>
-    </div>
         <div class="bottom-part">
-                <app-small-icons></app-small-icons>
-            <img src="/assets/image/skill-set/pullToPeel.png" alt="">
-    </div>
+            <app-small-icons></app-small-icons>
+            <div class="pullImage">
+
+            </div>
+        </div>
     </div>
 </section>
