@@ -77,6 +77,21 @@
                 display: flex;
                 input{
                     margin-right: 1.4em;
+                    width: 20px;
+                    height: 20px;
+                    cursor: pointer;
+                    
+                    // Rote Border für ungültige Checkbox
+                    &.ng-invalid.ng-touched {
+                        accent-color: #ff4444;
+                        outline: 2px solid #ff4444;
+                        outline-offset: 2px;
+                    }
+                }
+                
+                p {
+                    color: white;
+                    transition: color 0.3s ease;
                 }
             }
             .inputfeld {
@@ -88,9 +103,45 @@
                 color: white;
                 width: 100%;
                 font-size: 18px;
+                transition: border-color 0.3s ease;
                 &::placeholder {
                     color: white;
                     font-size: 20px;
+                }
+                
+                // Chrome Autofill Hintergrund komplett entfernen - starke Methode
+                &:-webkit-autofill {
+                    -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+                    -webkit-text-fill-color: white !important;
+                    transition: background-color 5000s ease-in-out 0s !important;
+                }
+                
+                &:-webkit-autofill:hover {
+                    -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+                    -webkit-text-fill-color: white !important;
+                    transition: background-color 5000s ease-in-out 0s !important;
+                }
+                
+                &:-webkit-autofill:focus {
+                    -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+                    -webkit-text-fill-color: white !important;
+                    transition: background-color 5000s ease-in-out 0s !important;
+                }
+                
+                &:-webkit-autofill:active {
+                    -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+                    -webkit-text-fill-color: white !important;
+                    transition: background-color 5000s ease-in-out 0s !important;
+                }
+                
+                // Rote Border für ungültige Felder
+                &.ng-invalid.ng-touched {
+                    border-bottom: 1px solid #ff4444;
+                }
+                
+                // Grüne Border für gültige Felder (optional)
+                &.ng-valid.ng-touched {
+                    border-bottom: 1px solid #44ff44;
                 }
             }
             #message {
@@ -166,6 +217,103 @@
             align-items: flex-end;
             flex: 1;
             width: 100%;
+            
+            a {
+                color: white;
+                font-size: 1.6em;
+                position: relative;
+                padding: 0.8em 1.5em;
+                border-radius: 25px;
+                transition: all 0.3s ease;
+                z-index: 2;
+                
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background-color: #3b82f6;
+                    border-radius: 25px;
+                    opacity: 0;
+                    z-index: -1;
+                }
+                
+                &:hover::before {
+                    opacity: 1;
+                }
+                
+                &:hover {
+                    color: white;
+                }
+            }
+            
+            .github-link::after {
+                content: "";
+                position: absolute;
+                top: -25%;
+                left: -40px;
+                transform: translateY(-50%);
+                width: 30px;
+                height: 30px;
+                background-image: url("./../../../../public/assets/image/hero/github.png");
+                background-size: contain;
+                background-repeat: no-repeat;
+                opacity: 0;
+                transition: all 0.4s ease;
+                z-index: 3;
+            }
+            
+            .github-link:hover::after {
+                left: 65px;
+                opacity: 1;
+                transform: translateY(-50%) rotate(360deg);
+            }
+            
+            .linkedin-link::after {
+                content: "";
+                position: absolute;
+                top: -25%;
+                left: -40px;
+                transform: translateY(-50%);
+                width: 30px;
+                height: 30px;
+                background-image: url("./../../../../public/assets/image/hero/linkedIn.png");
+                background-size: contain;
+                background-repeat: no-repeat;
+                opacity: 0;
+                transition: all 0.4s ease;
+                z-index: 3;
+            }
+            
+            .linkedin-link:hover::after {
+                left: 70px;
+                opacity: 1;
+                transform: translateY(-50%) rotate(360deg);
+            }
+            
+            .email-link::after {
+                content: "";
+                position: absolute;
+                top: -25%;
+                left: -40px;
+                transform: translateY(-50%);
+                width: 30px;
+                height: 30px;
+                background-image: url("./../../../../public/assets/image/hero/mails.png");
+                background-size: contain;
+                background-repeat: no-repeat;
+                opacity: 0;
+                transition: all 0.4s ease;
+                z-index: 3;
+            }
+            
+            .email-link:hover::after {
+                left: 50px;
+                opacity: 1;
+                transform: translateY(-50%) rotate(360deg);
+            }
         }
     }
 }

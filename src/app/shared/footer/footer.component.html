@@ -15,7 +15,7 @@
                 <img src="assets/image/footer/rightArrow.png" alt="" />
             </div>
         </div>
-        <form>
+        <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
             <label for="name">{{"contactMe.form.nameLabel"  | translate }}</label>
             <input
                 class="inputfeld"
@@ -23,6 +23,8 @@
                 id="name"
                 name="name"
                 required
+                #nameField="ngModel"
+                ngModel
                 [placeholder]="'contactMe.form.namePlaceholder' | translate"
             />
 
@@ -33,6 +35,9 @@
                 id="email"
                 name="email"
                 required
+                email
+                #emailField="ngModel"
+                ngModel
                 pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
                 [placeholder]="'contactMe.form.emailPlaceholder' | translate"
             />
@@ -43,12 +48,15 @@
                 id="message"
                 name="message"
                 required
+                #messageField="ngModel"
+                ngModel
                 [placeholder]="'contactMe.form.messagePlaceholder' | translate"
             ></textarea>
 
             <label class="checkbox">
-                <input type="checkbox" id="privacy" name="privacy" />
-                <p [innerHTML]="'contactMe.form.privacyText' | translate"></p>
+                <input type="checkbox" id="privacy" name="privacy" required #privacyField="ngModel" ngModel />
+                <p [innerHTML]="'contactMe.form.privacyText' | translate" 
+                   [class.error-text]="privacyField.invalid && privacyField.touched"></p>
             </label>
                     <div class="send-button">
                 <img src="assets/image/footer/rightArrow.png" alt="" />
@@ -69,9 +77,9 @@
         </div>
         
         <div class="links">
-            <a href="">{{"contactMe.footer.links.github"| translate}}</a>
-            <a href="">{{"contactMe.footer.links.linkedin"| translate}}</a>
-            <a href="">{{"contactMe.footer.links.email"| translate}}</a>
+            <a href="" class="github-link">{{"contactMe.footer.links.github"| translate}}</a>
+            <a href="" class="linkedin-link">{{"contactMe.footer.links.linkedin"| translate}}</a>
+            <a href="" class="email-link">{{"contactMe.footer.links.email"| translate}}</a>
         </div>
     </div>
 </div>

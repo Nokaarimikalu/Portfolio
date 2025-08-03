@@ -38,14 +38,28 @@ section {
             a {
                 border: 2px solid white;
                 border-radius: 50px;
-                transition: background-color 0.4s ease;
-                &:hover {
+                position: relative;
+                overflow: hidden;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
                     background-color: #d8b4e2;
                     border-radius: 50px;
+                    clip-path: inset( 100% 0  0  0);
+                    transition: clip-path 0.4s ease;
+                }
+                &:hover::before {
+                    clip-path: inset(0 0 0 0);
                 }
                 img {
                     height: 5em;
                     padding: 0.4em;
+                    position: relative;
+                    z-index: 1;
                 }
             }
         }
