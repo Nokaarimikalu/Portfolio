@@ -48,6 +48,12 @@
             #name {
                 height: 4em;
             }
+            .checkbox{
+                display: flex;
+                input{
+                    margin-right: 1.4em;
+                }
+            }
             .inputfeld {
                 background: transparent;
                 border-top: none;
@@ -56,6 +62,7 @@
                 border-right: none;
                 color: white;
                 width: 100%;
+                font-size: 18px;
                 &::placeholder {
                     color: white;
                     font-size: 20px;
