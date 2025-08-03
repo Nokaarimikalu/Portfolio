@@ -81,7 +81,6 @@
                     height: 20px;
                     cursor: pointer;
                     
-                    // Rote Border für ungültige Checkbox
                     &.ng-invalid.ng-touched {
                         accent-color: #ff4444;
                         outline: 2px solid #ff4444;
@@ -108,8 +107,6 @@
                     color: white;
                     font-size: 20px;
                 }
-                
-                // Chrome Autofill Hintergrund komplett entfernen - starke Methode
                 &:-webkit-autofill {
                     -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
                     -webkit-text-fill-color: white !important;
@@ -134,12 +131,10 @@
                     transition: background-color 5000s ease-in-out 0s !important;
                 }
                 
-                // Rote Border für ungültige Felder
                 &.ng-invalid.ng-touched {
                     border-bottom: 1px solid #ff4444;
                 }
                 
-                // Grüne Border für gültige Felder (optional)
                 &.ng-valid.ng-touched {
                     border-bottom: 1px solid #44ff44;
                 }
