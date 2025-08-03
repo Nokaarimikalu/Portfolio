@@ -4,34 +4,56 @@
     justify-content: center;
     color: white;
     font-size: 10px;
-    padding: 12em 12em 8em 12em;
+    padding: clamp(10em, 12vw, 12em) clamp(0em, 5vw, 12em) clamp(1.5em, 8vw, 8em) clamp(0em, 5vw, 12em);
     background: url("./../../../../public/assets/image/footer/06_Contact.png");
     background-repeat: no-repeat;
     background-size: cover;
     .footer-part {
         display: flex;
         justify-content: space-between;
+        @media(max-width:1000px){
+            align-items: center;
+            flex-direction: column;
+        }
         .left-part {
             display: flex;
             flex-direction: column;
+            justify-content: space-around;
             width: 40%;
+            @media(max-width:1000px){
+                width: 90%;
+            }
+            .left-part-text{
+                width: 100%;
+                @media(max-width:1000px){
+                    padding-bottom: 8em;
+                }
+                h2 {
+                    width: 140%;
+                    padding-bottom: 40px;
+                    hyphens: auto;
+                    overflow-wrap: break-word;
+                    @media(max-width:1000px){
+                        width: 100%;
+                        font-size: clamp(38px, 10vw, 60px);
+                    }
+                }
+                .spanTwo {
+                    padding-bottom: 40px;
+                }
+                span {
+                    word-break: break-word;
+                }
+            }
             img {
                 display: flex;
                 flex: 1;
                 justify-self: flex-end;
                 height: 4em;
                 width: 20em;
-            }
-            h2 {
-                padding-bottom: 40px;
-                hyphens: auto;
-                overflow-wrap: break-word;
-            }
-            .spanTwo {
-                padding-bottom: 40px;
-            }
-            span {
-                word-break: break-word;
+                @media(max-width:1000px){
+                    display: none;
+                }
             }
         }
         form {
@@ -40,6 +62,9 @@
             display: flex;
             align-items: center;
             flex-direction: column;
+            @media(max-width:1000px){
+                width: 90%;
+            }
             textarea:focus,
             input:focus {
                 outline: none;
@@ -75,7 +100,7 @@
             label {
                 font-size: 2em;
                 p {
-                    font-size: 1em;
+                    font-size: 16px;
                 }
             }
         }
@@ -98,14 +123,33 @@
         display: flex;
         justify-content: space-between;
         gap: 4em;
+        @media(max-width:660px){
+            flex-direction: column;
+            display: flex;
+            justify-content: space-between;
+        }
         a {
             color: white;
             font-size: 1.6em;
         }
         .logoAndName {
             width: 20%;
+            @media(max-width:660px){
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                padding-top: 6em;
+            }
+            .footer-name{
+            @media(max-width:660px){
+                text-align: right;
+            }
+            }
             h4 {
                 padding-bottom: 2em;
+                @media(max-width:660px){
+                    padding-bottom: 1em;
+                }
             }
             .footer-logo-img {
                 transition: filter 0.3s ease;
@@ -126,97 +170,3 @@
     }
 }
 
-@media (max-width: 1360px) {
-    .content {
-        padding: 12em 6em 12em 6em;
-        @media (max-width: 860px) {
-            padding: 10em 3em 10em 3em;
-        }
-    }
-}
-@media (max-width: 1200px) {
-    .content .footer-part {
-        flex-direction: column;
-        align-items: center;
-        .left-part {
-            width: 90%;
-            img {
-                display: none;
-            }
-            .spanTwo {
-                padding-bottom: 6em;
-            }
-        }
-        form {
-            width: 90%;
-        }
-        .send-button {
-            width: 100%;
-            justify-content: space-around;
-            padding-bottom: 8em;
-            img {
-                display: block;
-            }
-        }
-    }
-}
-@media (max-width: 520px) {
-    .content {
-        .footer-part {
-            .left-part {
-                h3 {
-                    font-size: 2em;
-                }
-                h2 {
-                    font-size: 4em;
-                }
-                span {
-                    font-size: 1.4em;
-                }
-            }
-            form {
-                label {
-                    font-size: 2em;
-                    p {
-                        font-size: 0.6em;
-                    }
-                }
-            }
-            .send-button {
-                img {
-                    width: 100px;
-                    height: 25px;
-                }
-                button {
-                    padding: 0.6em 2em;
-                }
-            }
-        }
-        .bottom-part {
-            flex-direction: column;
-            .logoAndName {
-                display: flex;
-                justify-content: space-between;
-                padding-bottom: 6em;
-                width: 100%;
-                h4 {
-                    padding: 0.5em;
-                }
-                .footer-name {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: flex-end;
-                    width: 100%;
-                    .legalNotice {
-                        display: flex;
-                        justify-content: flex-end;
-                        padding-top: 20px;
-                    }
-                }
-                .footer-logo-img:hover {
-                    filter: sepia(100%) saturate(10000%) hue-rotate(280deg);
-                }
-            }
-        }
-    }
-}
