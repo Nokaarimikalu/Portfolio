@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, OnDestroy, HostListener } from '@angular/core';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LangToggleComponent } from './lang-toggle/lang-toggle.component';
 import { SocialMediaComponent } from '../social-media/social-media.component';
@@ -9,10 +9,28 @@ import { SocialMediaComponent } from '../social-media/social-media.component';
     templateUrl: './header.component.html',
     styleUrl: './header.component.scss',
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit, OnDestroy {
 
     menuOpen = false;
 
+    ngOnInit() {
+        this.checkScreenSize();
+    }
+
+    ngOnDestroy() {
+        // Cleanup wenn nötig
+    }
+
+    @HostListener('window:resize', ['$event'])
+    onResize(event: any) {
+        this.checkScreenSize();
+    }
+
+    private checkScreenSize() {
+        if (window.innerWidth >= 700 && this.menuOpen) {
+            this.menuOpen = false;
+        }
+    }
 
     toggleMenu() {
         if (this.menuOpen) {

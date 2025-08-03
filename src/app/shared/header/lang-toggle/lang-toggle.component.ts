@@ -14,8 +14,10 @@ export class LangToggleComponent {
     toggleLanguage() {
         if (this.isDeActive) {
             this.isDeActive = false;
+            this.translate.use('en');
         } else {
             this.isDeActive = true;
+            this.translate.use('de');
         }
     }
     toggleDE(language: string) {
