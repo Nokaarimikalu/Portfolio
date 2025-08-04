@@ -6,6 +6,7 @@
     position: relative;
     font-family: "Bricolage Grotesque";
     text-decoration: none;
+    scroll-behavior: smooth;
 }
 
 @font-face {
@@ -91,6 +92,21 @@ button {
     }
     80% {
         clip-path: inset(0 100% 0 0);
+    }
+    100% {
+        clip-path: inset(0 100% 0 0);
+    }
+}
+
+@keyframes footerReveal {
+    0% {
+        clip-path: inset(0 100% 0 0);
+    }
+    20% {
+        clip-path: inset(0 0 0 0);
+    }
+    80% {
+        clip-path: inset(0 0 0 0);
     }
     100% {
         clip-path: inset(0 100% 0 0);

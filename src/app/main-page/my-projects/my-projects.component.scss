@@ -2,11 +2,11 @@
     display: flex;
     justify-content: center;
     font-size: 10px;
+    padding: 10em 2em 8em 2em;
     .myProjects {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
-        padding: 12em 12em 0em 12em;
         .title {
             display: flex;
             justify-content: center;
@@ -123,9 +123,6 @@
         @media (max-width: 1160px) {
             font-size: 7px;
         }
-        .myProjects {
-            padding: 6em 6em 0em 6em;
-        }
     }
 }
 @media (max-width: 950px) {
@@ -160,9 +157,7 @@
             flex-direction: column;
             align-items: center;
             flex-wrap: nowrap;
-            padding: 4em 2em 4em 2em;
             .title {
-                height: 30dvh;
                 width: 80%;
                 margin-bottom: 4em;
                 justify-content: flex-end;
@@ -183,8 +178,5 @@
 @media (max-width: 400px) {
     .content .myProjects .template-project {
         padding: 0;
-        .titleForProject {
-            padding: 2em 0 0 0;
-        }
     }
 }

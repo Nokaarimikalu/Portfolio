@@ -1,3 +1,4 @@
+<section>
 <div class="content">
     <div class="footer-part">
         <div class="left-part">
@@ -15,7 +16,7 @@
                 <img src="assets/image/footer/rightArrow.png" alt="" />
             </div>
         </div>
-        <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+        <form #contactForm="ngForm" id="getInTouch" (ngSubmit)="onSubmit(contactForm)">
             <label for="name">{{"contactMe.form.nameLabel"  | translate }}</label>
             <input
                 class="inputfeld"
@@ -38,7 +39,7 @@
                 email
                 #emailField="ngModel"
                 ngModel
-                pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+                pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
                 [placeholder]="'contactMe.form.emailPlaceholder' | translate"
             />
 
@@ -56,11 +57,11 @@
             <label class="checkbox">
                 <input type="checkbox" id="privacy" name="privacy" required #privacyField="ngModel" ngModel />
                 <p [innerHTML]="'contactMe.form.privacyText' | translate" 
-                   [class.error-text]="privacyField.invalid && privacyField.touched"></p>
+                    [class.error-text]="privacyField.invalid && privacyField.touched"></p>
             </label>
-                    <div class="send-button">
+            <div class="send-button">
                 <img src="assets/image/footer/rightArrow.png" alt="" />
-                <button type="submit" >{{ 'contactMe.form.sendButton' | translate }}</button>
+                <button type="submit" [disabled]="contactForm.invalid">{{ 'contactMe.form.sendButton' | translate }}</button>
             </div>
         </form>
 
@@ -77,9 +78,10 @@
         </div>
         
         <div class="links">
-            <a href="" class="github-link">{{"contactMe.footer.links.github"| translate}}</a>
-            <a href="" class="linkedin-link">{{"contactMe.footer.links.linkedin"| translate}}</a>
-            <a href="" class="email-link">{{"contactMe.footer.links.email"| translate}}</a>
+            <a href="https://github.com/Nokaarimikalu" target="_blank" rel="noopener noreferrer" class="github-link">{{"contactMe.footer.links.github"| translate}}</a>
+            <a href="https://de.linkedin.com/" target="_blank" rel="noopener noreferrer" class="linkedin-link">{{"contactMe.footer.links.linkedin"| translate}}</a>
+            <a href="mailto:fliednerpascal@gmail.com" class="email-link">{{"contactMe.footer.links.email"| translate}}</a>
         </div>
     </div>
 </div>
+</section>

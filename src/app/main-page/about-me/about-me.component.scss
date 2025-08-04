@@ -1,9 +1,11 @@
 section {
     display: flex;
-    height: 100dvh;
+    min-height: 100dvh;
     font-size: 10px;
     .content {
         display: flex;
+        padding-bottom: 4em;
+        padding-top: 8em;
         .left-part {
             display: flex;
             flex-direction: column;
@@ -71,18 +73,21 @@ section {
                 > p {
                     font-size: 2.4em;
                 }
-                > button {
+                > a {
                     align-self: flex-end;
-                    padding: 0.5em 1em;
-                    border-radius: 5em;
-                    font-size: 2.4em;
-                    box-shadow: 1.5px 4px;
-                    background-color: white;
-                    &:hover {
-                        color: white;
-                        background-color: #e77e60;
-                        box-shadow: none;
-                        translate: 1.5px 4px;
+                    
+                    > button {
+                        padding: 0.5em 1em;
+                        border-radius: 5em;
+                        font-size: 2.4em;
+                        box-shadow: 1.5px 4px;
+                        background-color: white;
+                        &:hover {
+                            color: white;
+                            background-color: #e77e60;
+                            box-shadow: none;
+                            translate: 1.5px 4px;
+                        }
                     }
                 }
             }
@@ -92,7 +97,6 @@ section {
 
 @media (max-width: 1300px) {
     section {
-        height: 110dvh;
         font-size: 8px;
         @media (max-width: 590px) {
             font-size: 7px;

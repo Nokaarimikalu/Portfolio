@@ -1,5 +1,6 @@
 section {
-    height: 92dvh;
+    min-height: 100dvh;
+    padding: 10em 0em 10em 0em;
     width: 100%;
     background-image: url("./../../../../public/assets/image/skill-set/background.png");
     background-repeat: no-repeat;
@@ -30,8 +31,8 @@ section {
 
                     .animatedBackground {
                         position: absolute;
-                        top: 5px;
-                        left: -10px;
+                        top: -10px;
+                        left: -20px;
                         width: 120%;
                         height: 120%;
                         background-image: url("./../../../../public/assets/image/skill-set/skillset.png");
@@ -84,7 +85,6 @@ section {
 }
 @media (max-width: 1250px) {
     section {
-        height: 130dvh;
         .content {
             .top-part {
                 align-items: center;
@@ -135,7 +135,6 @@ section {
 
 @media (max-width: 850px) {
     section {
-        height: 140dvh;
         .content {
             .top-part {
                 .introduction {

@@ -1,7 +1,7 @@
 
     <div class="content">
         <div class="logo"></div>
-        <app-navbar class="full-nav"></app-navbar>
+        <app-navbar class="full-nav" (closeMenu)="closeMenu()"></app-navbar>
         <app-lang-toggle class="language"></app-lang-toggle>
         <div class="menu" (click)="toggleMenu()">
             <div class="whiteLine"></div>
@@ -18,7 +18,7 @@
                     <div class="whiteLine"></div>
                 </div>
             </div>
-            <app-navbar></app-navbar>
+            <app-navbar (closeMenu)="closeMenu()"></app-navbar>
             <div class="mobile-Lang">
                 <app-lang-toggle [class.d-flex]="menuOpen"></app-lang-toggle>
             </div>

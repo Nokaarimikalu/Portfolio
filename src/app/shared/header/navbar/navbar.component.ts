@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { TranslatePipe } from '@ngx-translate/core';
 @Component({
   selector: 'app-navbar',
@@ -7,5 +7,9 @@ import { TranslatePipe } from '@ngx-translate/core';
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
+  @Output() closeMenu = new EventEmitter<void>();
 
+  onLinkClick() {
+    this.closeMenu.emit();
+  }
 }

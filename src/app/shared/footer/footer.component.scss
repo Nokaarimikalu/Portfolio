@@ -1,3 +1,10 @@
+section{
+    width: 100dvw;
+    background: url("./../../../../public/assets/image/footer/06_Contact.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
 .content {
     display: flex;
     flex-direction: column;
@@ -5,9 +12,9 @@
     color: white;
     font-size: 10px;
     padding: clamp(10em, 12vw, 12em) clamp(0em, 5vw, 12em) clamp(1.5em, 8vw, 8em) clamp(0em, 5vw, 12em);
-    background: url("./../../../../public/assets/image/footer/06_Contact.png");
-    background-repeat: no-repeat;
-    background-size: cover;
+    @media(min-width:3000px){
+        padding-top: 18em;
+    }
     .footer-part {
         display: flex;
         justify-content: space-between;
@@ -51,6 +58,8 @@
                 justify-self: flex-end;
                 height: 4em;
                 width: 20em;
+                animation: footerReveal infinite ease-in-out;
+                animation-duration: 5s;
                 @media(max-width:1000px){
                     display: none;
                 }
@@ -154,14 +163,48 @@
             display: flex;
             justify-content: space-around;
             align-items: center;
+            width: 100%;
             img {
                 display: none;
                 height: 3em;
                 width: 14em;
+                animation: footerReveal infinite ease-in-out;
+                animation-duration: 5s;
+                
+                @media(max-width:1000px){
+                    display: flex;
+                }
+                @media(max-width:400px){
+                    height: 2em;
+                    width: 10em;
+                }
             }
             button {
-                padding: 1em 5em;
+                padding: 0.6em 3em;
                 border-radius: 2em;
+                font-size: 16px;
+                transition: all 0.3s ease;
+                
+                &:disabled {
+                    opacity: 0.5;
+                    cursor: not-allowed;
+                    background-color: #cccccc;
+                    color: #666666;
+                    
+                    &:hover {
+                        background-color: #cccccc;
+                        color: #666666;
+                    }
+                }
+                
+                &:not(:disabled) {
+                    cursor: pointer;
+                    
+                    &:hover {
+                        background-color: #007bff;
+                        color: white;
+                    }
+                }
             }
         }
     }
@@ -203,7 +246,33 @@
             }
             .legalNotice {
                 width: 100%;
-                position: relative; 
+                position: relative;
+                transition: color 0.3s ease;
+                z-index: 1;
+                padding: 0.5em;
+                
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background-image: url("./../../../../public/assets/image/header/contact.png");
+                    background-repeat: no-repeat;
+                    background-size: 100% 100%;
+                    clip-path: inset(0 100% 0 0);
+                    transition: clip-path 0.2s ease;
+                    z-index: -1;
+                }
+                
+                &:hover::before {
+                    clip-path: inset(0 0 0 0);
+                }
+                
+                &:hover {
+                    color: white;
+                }
             }
         }
         .links {
@@ -269,7 +338,7 @@
             .linkedin-link::after {
                 content: "";
                 position: absolute;
-                top: -25%;
+                top: -28%;
                 left: -40px;
                 transform: translateY(-50%);
                 width: 30px;
