@@ -4,7 +4,7 @@
     align-items: center;
     z-index: 9999;
     height: 8dvh;
-    padding-top: 12px;
+    padding: 12px 12px 0px 12px;
     .logo {
         height: 60px;
         width: 60px;
@@ -44,6 +44,7 @@
         background-color: rgba(0, 0, 0, 0.796);
         &.d-flex {
             display: flex;
+            right: 0px;
         }
     }
     .slide-menu {
