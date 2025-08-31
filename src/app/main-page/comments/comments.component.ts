@@ -19,23 +19,23 @@ export class CommentsComponent {
     Comments: Comments[] = [
         {
             class: 'one',
-            text: 'comments.keven.text',
-            name: 'comments.keven.name',
-            work: 'comments.keven.work',
+            text: 'comments.Irina.text',
+            name: 'comments.Irina.name',
+            work: 'comments.Irina.work',
             profileLink: '#',
         },
         {
             class: 'two',
-            text: 'comments.essma.text',
-            name: 'comments.essma.name',
-            work: 'comments.essma.work',
+            text: 'comments.Burak.text',
+            name: 'comments.Burak.name',
+            work: 'comments.Burak.work',
             profileLink: '#',
         },
         {
             class: 'three',
-            text: 'comments.willstma.text',
-            name: 'comments.willstma.name',
-            work: 'comments.willstma.work',
+            text: 'comments.Maik.text',
+            name: 'comments.Maik.name',
+            work: 'comments.Maik.work',
             profileLink: '#',
         },
     ];

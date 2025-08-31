@@ -1,27 +1,64 @@
+@if (project) {
 <section>
+    <app-header></app-header>
     <div class="content">
         <div class="left-part">
-            <button>Go Back</button>
-            <h1>Projekt</h1>
+            <button (click)="goBack()">
+                <img src="assets/image/projectSullscreen/backarrow.svg" alt="">
+                Go Back
+            </button>
+            <h1>{{ project.title | translate }}</h1>
             <div class="description">
                 <h3>Description</h3>
                 <span>
-                    Task manager inspired by the Kanban System. Create and organize tasks using drag and
-                    drop functions, assign users and categories.
+                    {{ project.description | translate }}
                 </span>
             </div>
-            <div class="detaisl">
-                <h3>Implementation</h3>
+            <div class="details">
+                <h3>Implementation Details</h3>
                 <span>
-                    Short text that describes your role or the workflor for this specific project. Let a recruiter know more about your knowledge and ability to work independently
-                    or collaboratively in a structured way.
+                    {{ project.implementation | translate }}
                 </span>
             </div>
-            <p><b>Duration</b>: 5Weeks</p>
-            <span class="html-css">CSS HTML Firebase Angular Typescript</span>
+            <p><b>Duration</b>: {{ project.duration | translate }}</p>
+            <div class="tech-icons">
+                @for (tech of project.technologies; track tech) {
+                    <div class="tech-item">
+                        <img [src]="getTechIcon(tech)" [alt]="tech" [title]="tech">
+                        <span>{{ tech }}</span>
+                    </div>
+                }
+            </div>
         </div>
         <div class="right-part">
-
+            <div class="content-right">
+                <img [src]="project.url" [alt]="project.title | translate">
+                <div class="buttons">
+                    @if (project.githubUrl) {
+                        <button>
+                            <a [href]="project.githubUrl" target="_blank" rel="noopener noreferrer">
+                                Github
+                            </a>
+                        </button>
+                    }
+                    @if (project.liveUrl) {
+                        <button>
+                            <a [href]="project.liveUrl" target="_blank" rel="noopener noreferrer">
+                                Live Test
+                            </a>
+                        </button>
+                    }
+                </div>
+                <div class="next-project">
+                    @if (nextProject) {
+                        <button (click)="goToNextProject()">
+                            Next Project
+                            <img src="assets/image/projectSullscreen/Backimage.svg" alt="">
+                        </button>
+                    }
+                </div>
+            </div>
         </div>
     </div>
 </section>
+}

@@ -47,7 +47,7 @@ section {
                     left: 0;
                     right: 0;
                     bottom: 0;
-                    background-color: #d8b4e2;
+                    background-color: #3355ff;
                     border-radius: 50px;
                     clip-path: inset( 100% 0  0  0);
                     transition: clip-path 0.4s ease;
@@ -85,10 +85,43 @@ section {
                         background-color: transparent;
                         border: white 2px solid;
                         color: white;
+                        transition: color 0.3s ease;
+                        &:hover::after{
+                            content: "I'm Pascal Fliedner";
+                            position: absolute;
+                            background-color: #3355ff;
+                            border-radius: 50px;
+                            text-align: center;
+                            z-index: 100;
+                            left: 0;
+                            top: 5px;
+                            width: 100%;
+                            height: 90%;
+                        }
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            top: -55%;
+                            left: 70px;
+                            transform: translateY(-50%);
+                            width: 50px;
+                            height: 50px;
+                            background-image: url("./../../../../public/assets/image/hero/waving_hand.svg");
+                            background-size: contain;
+                            background-repeat: no-repeat;
+                            opacity: 0;
+                            transition: all 0.4s ease;
+                            z-index: 3;
+                        }
+                        
+                        &:hover::before {
+                            left: 210px;
+                            opacity: 1;
+                            transform: translateY(-50%) rotate(360deg);
+                        }
                         &:hover {
-                            padding: 5px 20px;
-                            background-color: #d8b4e2;
-                            transition: background-color 0.4s ease;
+                            padding: 5px 60px;
+                            background-color: #3355ff;
                         }
                     }
                     .frontend {

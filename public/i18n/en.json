@@ -30,8 +30,7 @@
     "contactMe": {
         "title": "CONTACT ME",
         "subtitle": "Ready to work together?",
-        "description1": "Encourage people to contact you and describe what role you are interested in. Express confidence in your ability to make a meaningful contribution to a team through your expertise and enthusiasm for improving your skills.",
-        "description2": "Show interest in contributing to a new project, while highlighting the value and skills you can bring to the table.",
+        "description1": "I am excited to connect with new people and explore inspiring projects. As an aspiring Frontend Developer, I bring not only technical knowledge but also a strong passion for writing clean, user-friendly code. With my structured and eager-to-learn approach, I can quickly adapt to new challenges and actively contribute to the success of the team. If you are looking for someone motivated and passionate about building modern frontend solutions, I’d be happy to hear from you!",
         "form": {
             "nameLabel": "What's your name?",
             "namePlaceholder": "Your name goes here",
@@ -55,15 +54,24 @@
     "myProjects": {
         "join": {
             "title": "Join",
-            "text": "Task manager inspired by the Kanban System. Create and organize tasks using a drag and drop functions, assign users and categories."
+            "text": "Task manager inspired by the Kanban System. Create and organize tasks using a drag and drop functions, assign users and categories.",
+            "description": "Join is a comprehensive project management application that leverages the proven Kanban system. The intuitive drag-and-drop functionality enables teams to efficiently manage tasks and visualize project progress. With user-friendly features like user assignments, categorization, and flexible workflows, Join provides everything modern teams need for successful collaboration.",
+            "implementation": "Built with HTML, CSS, and JavaScript. Implemented drag-and-drop functionality using native Web APIs. Firebase backend for data persistence and user authentication. Responsive design for optimal usage across all devices. Clean Code principles for maintainable and scalable code architecture.",
+            "duration": "5 Weeks"
         },
         "elPollo": {
             "title": "El Pollo Loco",
-            "text": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen."
+            "text": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.",
+            "description": "El Pollo Loco is an action-packed 2D platform game developed using object-oriented programming principles. Join Pepe on his adventure through colorful levels filled with challenges. Collect coins and tabasco bottles to prepare for the epic boss battle against the crazy hen. With smooth animations and engaging gameplay mechanics, this game provides hours of entertainment.",
+            "implementation": "Fully developed in JavaScript using object-oriented approach. HTML5 Canvas for rendering and animations. Event-driven controls for responsive gameplay mechanics. Collision detection system for precise game interactions. Modular architecture for easy extensibility and maintenance.",
+            "duration": "3 Weeks"
         },
         "pokedex": {
             "title": "Pokedex",
-            "text": "A project that uses an API to display detailed Pokémon info — like stats, types, and abilities — all in one place."
+            "text": "A project that uses an API to display detailed Pokémon info — like stats, types, and abilities — all in one place.",
+            "description": "The Pokédex is a modern web application that utilizes the comprehensive PokéAPI to present detailed information about all Pokémon. From base statistics to type effectiveness and evolutionary chains – this application offers Pokémon fans and developers alike a comprehensive insight into the Pokémon world. With intuitive search functionality and appealing design, exploring the Pokémon universe becomes truly enjoyable.",
+            "implementation": "JavaScript with Fetch API for asynchronous data retrieval. RESTful API integration with PokéAPI. Dynamic DOM manipulation for responsive user interface. CSS Grid and Flexbox for modern layouts. Error handling and loading states for optimal user experience.",
+            "duration": "open Project"
         },
         "projectDetails": "Project details"
     },
@@ -72,17 +80,17 @@
         "headingBig": "Colleagues Thoughts",
         "profile": "Profile",
 
-        "keven": {
-            "text": "Keven's feedback goes here. It can be a long comment or short.",
-            "name": "Keven Gebauer",
+        "Irina": {
+            "text": "Pascal was a valuable part of our programming team. With great enthusiasm and determination, he contributed to bringing the project to a clean and functional completion. His structured way of working and his commitment played a decisive role in the success. Working with him was very pleasant and productive.",
+            "name": "Irina Gorges",
             "work": "Frontend Developer"
         },
-        "essma": {
+        "Burak": {
             "text": "Essma's feedback goes here. It can be a long comment or short.",
             "name": "Essma",
             "work": "Frontend Developer"
         },
-        "willstma": {
+        "Maik": {
             "text": "Willstma's feedback goes here. It can be a long comment or short.",
             "name": "WIllstma",
             "work": "Frontend Developer"

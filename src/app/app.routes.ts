@@ -4,5 +4,5 @@ import { ProjectFullViewComponent } from './project-full-view/project-full-view.
 
 export const routes: Routes = [
     {path: '',component: MainPageComponent,},
-    { path: 'fullProject', component: ProjectFullViewComponent },
+    { path: 'project/:id', component: ProjectFullViewComponent },
 ];

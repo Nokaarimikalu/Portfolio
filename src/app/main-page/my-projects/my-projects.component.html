@@ -14,14 +14,14 @@
             <div class="template-project">
                 <div class="image">
                     <img [src]="item.url" alt="" />
-                    <button [routerLink]="['/fullProject']" class="buttonOne" >
+                    <button [routerLink]="['/project', item.id]" class="buttonOne" >
                         {{ "myProjects.projectDetails" | translate }}
                     </button>
                 </div>
                 <div class="titleForProject">
                     <h3>{{ item.title | translate }}</h3>
                     <span>{{ item.text | translate }}</span>
-                    <button class="buttonTwo">
+                    <button [routerLink]="['/project', item.id]" class="buttonTwo">
                         {{ "myProjects.projectDetails" | translate }}
                     </button>
                 </div>
