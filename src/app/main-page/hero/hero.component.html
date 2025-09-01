@@ -15,20 +15,35 @@
             <div class="hero-upper-part">
             <div class="hero-upper-part-text">
                 <button>{{'hero.hello' | translate}}</button>
-                <div class="frontend">Frontend</div>
+                <div class="header">
+                    @for (word of frontend; track $index) {
+                      <span class="text" [class.upper]="word === word.toUpperCase()" [class.lower]="word !== word.toUpperCase()" [attr.data-index]="$index">
+                        {{ word }}
+                      </span>
+                    }
+                </div>
             </div>
-            <img src="assets/image/hero/polariod.png" alt="">
+            <div class="image-wrapper">
+                <img src="assets/image/hero/polariod.png" alt="">
+            </div>
+            
         </div>
         <div class="hero-down-part">
-            <div class="developer">DEVELOPER</div>
+            <div class="header">
+                @for (word of developer; track $index) {
+                     <span class="text" [class.upper]="word === word.toUpperCase()" [class.lower]="word !== word.toUpperCase()">
+                        {{ word }}
+                    </span>
+                    }
+            </div>
             <a href="#getInTouch">
                 <button>{{'hero.contact' | translate}}</button>
             </a>
         </div>
         <div class="resposniveImage">
-            <span>Pascal :D</span>
+            <span></span>
         </div>
-        
+
         </div>
     </div>
 </section>
