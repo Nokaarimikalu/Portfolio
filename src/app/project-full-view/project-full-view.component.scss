@@ -2,7 +2,6 @@ section{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100dvh;
     background-color: #1d1d1d;
     position: relative;
     
@@ -18,17 +17,28 @@ section{
         display: flex;
         width: 100%;
         max-width: 1980px;
-        background: url("./../../../public/assets/image/projectSullscreen/Note\ book\ paper.png");
+        background: url("./../../../public/assets/image/projectSullscreen/Notebookpaper.png");
         background-size: 100% 100%;
         height: 100%;
         margin: 0 auto;
-        
+        @media(max-width: 1250px){
+            flex-direction: column;
+            background: url("./../../../public/assets/image/projectSullscreen/asd.png");
+            background-size: 1250px 140%;
+
+        }
+
         .left-part{
             display: flex;
             flex-direction: column;
+            height: 100dvh;
             padding: 14dvh 0px 0px 10dvh;
             width: 45%;
-            height: 100dvh;
+        @media(max-width: 1250px){
+            width: 100%;
+            height: fit-content;
+            padding: 8dvh 5vw 0px 5vw;
+        }
             p{
                 font-size: 18px;
             }
@@ -55,6 +65,10 @@ section{
             h1{
                 font-size: 48px;
                 padding-bottom: 8dvh;
+                @media(max-width: 1250px){
+                    font-size: 36px;
+                    padding-bottom: 2dvh;
+                }
             }
             
             .description, .details{
@@ -130,7 +144,10 @@ section{
             align-items: center;
             justify-content: center;
             width: 55%;
-            height: 100dvh;
+            @media(max-width: 1250px){  
+                width: 100%;
+                align-items: flex-start;
+            }
             
             .content-right{
                 display: flex;
@@ -141,6 +158,16 @@ section{
                 img{
                     height: 400px;
                     border-radius: 15px;
+                    @media(max-width: 1250px){
+                        width: 60%;
+                        height: auto;
+                        margin-bottom: 4dvh;
+                    }
+                    @media(max-width: 650px){
+                        width: 90%;
+                        height: auto;
+                        margin-bottom: 4dvh;
+                    }
                 }
                 
                 .buttons{
