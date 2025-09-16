@@ -22,14 +22,14 @@ export class CommentsComponent {
             text: 'comments.Irina.text',
             name: 'comments.Irina.name',
             work: 'comments.Irina.work',
-            profileLink: '#',
+            profileLink: 'https://www.linkedin.com/in/irina-gorges-656486340/',
         },
         {
             class: 'two',
             text: 'comments.Burak.text',
             name: 'comments.Burak.name',
             work: 'comments.Burak.work',
-            profileLink: '#',
+            profileLink: 'https://www.linkedin.com/in/burak-bostanli-367b9637b/',
         },
         {
             class: 'three',

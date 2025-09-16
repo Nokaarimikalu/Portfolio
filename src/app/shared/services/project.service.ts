@@ -25,8 +25,8 @@ export class ProjectService {
             title: 'myProjects.join.title',
             text: 'myProjects.join.text',
             technologies: ['Angular', 'TypeScript', 'SCSS', 'Firebase'],
-            liveUrl: 'https://join-project-demo.com',
-            githubUrl: 'https://github.com/yourusername/join',
+            liveUrl: 'https://www.pascalfliedner.de/join/',
+            githubUrl: 'https://github.com/Nokaarimikalu/join',
             description: 'myProjects.join.description',
             implementation: 'myProjects.join.implementation',
             duration: 'myProjects.join.duration'
@@ -37,8 +37,8 @@ export class ProjectService {
             title: 'myProjects.elPollo.title',
             text: 'myProjects.elPollo.text',
             technologies: ['JavaScript', 'HTML', 'CSS'],
-            liveUrl: 'https://elpollo-demo.com',
-            githubUrl: 'https://github.com/yourusername/elpollo',
+            liveUrl: 'https://www.pascalfliedner.de/polloloco/',
+            githubUrl: 'https://github.com/Nokaarimikalu/El-Pollo-Loco',
             description: 'myProjects.elPollo.description',
             implementation: 'myProjects.elPollo.implementation',
             duration: 'myProjects.elPollo.duration'
@@ -49,8 +49,8 @@ export class ProjectService {
             title: 'myProjects.pokedex.title',
             text: 'myProjects.pokedex.text',
             technologies: ['React', 'SCSS', 'PokéAPI',],
-            liveUrl: 'https://pokedex-demo.com',
-            githubUrl: 'https://github.com/yourusername/pokedex',
+            liveUrl: 'https://www.pascalfliedner.de/pokedex/',
+            githubUrl: 'https://github.com/Nokaarimikalu/Pokedex',
             description: 'myProjects.pokedex.description',
             implementation: 'myProjects.pokedex.implementation',
             duration: 'myProjects.pokedex.duration'

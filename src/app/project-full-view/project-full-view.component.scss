@@ -60,11 +60,17 @@ section{
                 &:hover{
                     color:#e77e60;
                 }
+                @media(max-width:1250px){
+                    display: none;
+                }
             }
             
             h1{
                 font-size: 48px;
                 padding-bottom: 8dvh;
+                @media(max-width: 1450px){
+                    padding-bottom: 2dvh;
+                }
                 @media(max-width: 1250px){
                     font-size: 36px;
                     padding-bottom: 2dvh;
@@ -147,6 +153,7 @@ section{
             @media(max-width: 1250px){  
                 width: 100%;
                 align-items: flex-start;
+                padding-top: 4em;
             }
             
             .content-right{
@@ -155,7 +162,7 @@ section{
                 justify-content: center;
                 align-items: center;
                 
-                img{
+                .hugeimg{
                     height: 400px;
                     border-radius: 15px;
                     @media(max-width: 1250px){
@@ -166,7 +173,6 @@ section{
                     @media(max-width: 650px){
                         width: 90%;
                         height: auto;
-                        margin-bottom: 4dvh;
                     }
                 }
                 
@@ -177,6 +183,9 @@ section{
                     height: 80px;
                     width: 100%;
                     gap: 20px;
+                    @media(max-width:1250px){
+                        justify-content: center;
+                    }
                     
                     button{
                         font-size: 20px;
@@ -212,7 +221,19 @@ section{
                     justify-content: flex-end;
                     height: 80px;
                     width: 100%;
-                    
+                    @media(max-width:1250px){
+                        justify-content: center;
+                    }
+                    .goBack{
+                        display: none;
+                        &:hover{
+                            color: #e77e60;
+                        }
+                        @media(max-width:1250px){
+                            display: flex;
+                        }
+                    }
+
                     button{
                         display: flex;
                         align-items: center;

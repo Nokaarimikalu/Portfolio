@@ -32,7 +32,7 @@
         </div>
         <div class="right-part">
             <div class="content-right">
-                <img [src]="project.url" [alt]="project.title | translate">
+                <img class="hugeimg" [src]="project.url" [alt]="project.title | translate">
                 <div class="buttons">
                     @if (project.githubUrl) {
                         <button>
@@ -50,6 +50,10 @@
                     }
                 </div>
                 <div class="next-project">
+                    <button class="goBack" (click)="goBack()">
+                        <img src="assets/image/projectSullscreen/backarrow.svg" alt="">
+                            Go Back
+                    </button>
                     @if (nextProject) {
                         <button (click)="goToNextProject()">
                             Next Project
