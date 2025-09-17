@@ -143,12 +143,32 @@ section {
                         @media(max-width:630px){
                             width: 300px;
                         }
-                        .text{
+                        span{
                             font-weight: bold;
                             font-size: 13em;
                             letter-spacing: 0em;
                             display: inline-block;
+                            &:hover{
+                                color: #e77e60;
+                            }
                         }
+                        .char-0::before { content: 'F'; }
+                        .char-0:hover::before { content: 'f'; }
+                        .char-1::before { content: 'r'; }
+                        .char-1:hover::before { content: 'R'; }
+                        .char-2::before { content: 'o'; }
+                        .char-2:hover::before { content: 'O'; }
+                        .char-3::before { content: 'n'; }
+                        .char-3:hover::before { content: 'N'; }
+                        .char-4::before { content: 't'; }
+                        .char-4:hover::before { content: 'T'; }
+                        .char-5::before { content: 'e'; }
+                        .char-5:hover::before { content: 'E'; }
+                        .char-6::before { content: 'n'; }
+                        .char-6:hover::before { content: 'N'; }
+                        .char-7::before { content: 'd'; }
+                        .char-7:hover::before { content: 'D'; }
+
                     }
                 }
                 .image-wrapper {
@@ -215,12 +235,33 @@ section {
                 flex-direction: column;
                 align-items: flex-end;
                 .header {
-                    .text{
+                    span{
                         font-weight: bold;
                         font-size: 13em;
                         letter-spacing: 0em;
                         display: inline-block;
+                        &:hover{
+                            color: #e77e60;
+                        }
                     }
+                    .charb-0::before { content: 'D'; }
+                    .charb-0:hover::before { content: 'd'; }
+                    .charb-1::before { content: 'E'; }
+                    .charb-1:hover::before { content: 'e'; }
+                    .charb-2::before { content: 'V'; }
+                    .charb-2:hover::before { content: 'v'; }
+                    .charb-3::before { content: 'E'; }
+                    .charb-3:hover::before { content: 'e'; }
+                    .charb-4::before { content: 'L'; }
+                    .charb-4:hover::before { content: 'l'; }
+                    .charb-5::before { content: 'O'; }
+                    .charb-5:hover::before { content: 'o'; }
+                    .charb-6::before { content: 'P'; }
+                    .charb-6:hover::before { content: 'p'; }
+                    .charb-7::before { content: 'E'; }
+                    .charb-7:hover::before { content: 'e'; }
+                    .charb-8::before { content: 'R'; }
+                    .charb-8:hover::before { content: 'r'; }
                 }
                 button {
                     font-size: 30px;

@@ -17,23 +17,19 @@
                 <button>{{'hero.hello' | translate}}</button>
                 <div class="header">
                     @for (word of frontend; track $index) {
-                      <span class="text" [class.upper]="word === word.toUpperCase()" [class.lower]="word !== word.toUpperCase()" [attr.data-index]="$index">
-                        {{ word }}
-                      </span>
+                      <span [class]="'char-' + $index"></span>
                     }
                 </div>
             </div>
             <div class="image-wrapper">
                 <img src="assets/image/hero/polariod.png" alt="">
             </div>
-            
+      
         </div>
         <div class="hero-down-part">
             <div class="header">
-                @for (word of developer; track $index) {
-                     <span class="text" [class.upper]="word === word.toUpperCase()" [class.lower]="word !== word.toUpperCase()">
-                        {{ word }}
-                    </span>
+                @for (word of developer; track $index ) {
+                     <span [class]="'charb-' + $index"></span>
                     }
             </div>
             <a href="#getInTouch">
