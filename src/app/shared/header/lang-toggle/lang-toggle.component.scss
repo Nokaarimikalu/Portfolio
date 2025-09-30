@@ -13,6 +13,7 @@
             transition: color 0.3s;
             &.active {
                 color: #f77d5c;
+                text-shadow: 0 0 8px #fff, 0 0 16px #f77d5c, 0 0 24px #f77d5c;
             }
         }
         .toggle-switch {

@@ -5,14 +5,6 @@ section{
     background-color: #1d1d1d;
     position: relative;
     
-    app-header {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 10;
-    }
-    
     .content{
         display: flex;
         width: 100%;
@@ -20,7 +12,6 @@ section{
         background: url("./../../../public/assets/image/projectSullscreen/Notebookpaper.png");
         background-size: 100% 100%;
         height: 100%;
-        margin: 0 auto;
         @media(max-width: 1250px){
             flex-direction: column;
             background: url("./../../../public/assets/image/projectSullscreen/asd.png");

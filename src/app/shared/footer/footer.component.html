@@ -1,5 +1,5 @@
 <section>
-<div class="content">
+<div class="content" id="getInTouch">
     <div class="footer-part">
         <div class="left-part">
             <div class="left-part-text">
@@ -13,7 +13,7 @@
                 <img src="assets/image/footer/rightArrow.png" alt="" />
             </div>
         </div>
-        <form #contactForm="ngForm" id="getInTouch" (ngSubmit)="onSubmit(contactForm)">
+        <form #contactForm="ngForm"  (ngSubmit)="onSubmit(contactForm)">
             <label for="name">{{"contactMe.form.nameLabel"  | translate }}</label>
             <input
                 class="inputfeld"
@@ -70,7 +70,7 @@
             </div>
             <div class="footer-name">
                 <h4>{{"contactMe.footer.copyright"| translate}}</h4>
-                <a class="legalNotice" href="">{{"contactMe.footer.legalNotice"| translate}}</a>
+                <a class="legalNotice" href="/legal">{{"contactMe.footer.legalNotice"| translate}}</a>
             </div>
         </div>
         

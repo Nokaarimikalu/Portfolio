@@ -38,7 +38,7 @@
             "emailPlaceholder": "youremail@gmail.com",
             "messageLabel": "How can I help you?",
             "messagePlaceholder": "Hello Pascal, I am interested in...",
-            "privacyText": "I've read the <a href=\"#\">privacy policy</a> and agree to the processing of my data as outlined.",
+            "privacyText": "I've read the <a href=\"policy\">privacy policy</a> and agree to the processing of my data as outlined.",
             "sendButton": "Send"
         },
         "footer": {
@@ -95,5 +95,33 @@
             "name": "Maik Bennefeld",
             "work": "Frontend Developer"
         }
+    },
+    "policy": {
+        "title": "Privacy Policy",
+        "general": "I take the protection of personal data very seriously. This website is solely for showcasing my work as a web developer and is not operated for commercial purposes.",
+        "collection": "When visiting this website, technical information (e.g., browser type, operating system, time of access) is automatically collected by the hosting provider. No personal data is collected unless you actively contact me using the provided contact options.",
+        "usage": "The automatically collected data is used exclusively to ensure the smooth operation of the website and to improve its performance. Any personal data you voluntarily provide (e.g., via email) will only be used to process your request.",
+        "disclosure": "Personal data will not be passed on to third parties unless required by law.",
+        "cookies": "This website does not use cookies, tracking, or analytics tools.",
+        "rights": "You have the right to request access to, correction, or deletion of your personal data at any time.",
+        "contact": "If you have any questions regarding data protection, you can contact me using the details provided in the imprint."
+    },
+     "legalNotice": {
+    "title": "Legal Notice",
+    "intro": "This is a personal portfolio website by Pascal Fliedner. Its sole purpose is to showcase my work as a web developer.",
+    "responsible": {
+      "title": "Responsible for content",
+      "name": "Pascal Fliedner",
+      "location": "Schwabhausen, Germany",
+      "email": "Contact via the provided contact form"
+    },
+    "disclaimer": {
+      "title": "Disclaimer",
+      "text": "The contents of this website have been created with the greatest care. However, I cannot guarantee the accuracy, completeness, or timeliness of the content. As a private operator, I am not obliged to monitor transmitted or stored third-party information or investigate circumstances that indicate illegal activity."
+    },
+    "copyright": {
+      "title": "Copyright",
+      "text": "All content and works published on this website are subject to German copyright law. Reproduction, editing, or distribution is not permitted without explicit consent."
     }
+  }
 }

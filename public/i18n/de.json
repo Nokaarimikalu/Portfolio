@@ -38,7 +38,7 @@
             "emailPlaceholder": "deineemail@gmail.com",
             "messageLabel": "Wie kann ich dir helfen?",
             "messagePlaceholder": "Hallo Pascal, ich interessiere mich für...",
-            "privacyText": "Ich habe die <a href=\"#\">Datenschutzbestimmungen</a> gelesen und stimme der Verarbeitung meiner Daten zu.",
+            "privacyText": "Ich habe die <a href=\"policy\">Datenschutzbestimmungen</a> gelesen und stimme der Verarbeitung meiner Daten zu.",
             "sendButton": "Senden"
         },
         "footer": {
@@ -95,5 +95,33 @@
             "name": "Maik Bennefeld",
             "work": "Frontend Entwickler"
         }
+    },
+    "policy": {
+        "title": "Datenschutzerklärung",
+        "general": "Ich nehme den Schutz personenbezogener Daten sehr ernst. Diese Website dient ausschließlich der Präsentation meiner Arbeiten als Webentwickler und wird nicht zu kommerziellen Zwecken betrieben.",
+        "collection": "Beim Besuch dieser Seite werden automatisch technische Informationen (z. B. Browsertyp, Betriebssystem, Uhrzeit des Zugriffs) durch den Hosting-Anbieter erfasst. Darüber hinaus werden keine personenbezogenen Daten erhoben, außer du trittst aktiv über bereitgestellte Kontaktmöglichkeiten mit mir in Verbindung.",
+        "usage": "Die automatisch erhobenen Daten dienen ausschließlich der Sicherstellung eines reibungslosen Betriebs sowie zur Verbesserung der Website. Personenbezogene Daten, die du mir freiwillig (z. B. per E-Mail) übermittelst, werden ausschließlich zur Bearbeitung deiner Anfrage genutzt.",
+        "disclosure": "Es erfolgt keine Weitergabe von personenbezogenen Daten an Dritte, es sei denn, eine rechtliche Verpflichtung besteht.",
+        "cookies": "Diese Website verwendet keine Cookies, Tracking- oder Analysetools.",
+        "rights": "Du hast jederzeit das Recht auf Auskunft, Berichtigung oder Löschung deiner personenbezogenen Daten.",
+        "contact": "Solltest du Fragen zum Thema Datenschutz haben, kannst du mich über die im Impressum angegebenen Kontaktdaten erreichen."
+    },
+      "legalNotice": {
+    "title": "Impressum",
+    "intro": "Dies ist eine private Portfolio-Webseite von Pascal Fliedner. Sie dient ausschließlich der Präsentation meiner Arbeiten als Webentwickler.",
+    "responsible": {
+      "title": "Verantwortlich für den Inhalt",
+      "name": "Pascal Fliedner",
+      "location": "Schwabhausen, Deutschland",
+      "email": "Kontakt über das bereitgestellte Kontaktformular"
+    },
+    "disclaimer": {
+      "title": "Haftungsausschluss",
+      "text": "Die Inhalte dieser Webseite wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte übernehme ich jedoch keine Gewähr. Als privater Betreiber bin ich nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen."
+    },
+    "copyright": {
+      "title": "Urheberrecht",
+      "text": "Alle auf dieser Webseite veröffentlichten Inhalte und Werke unterliegen dem deutschen Urheberrecht. Eine Vervielfältigung, Bearbeitung oder Verbreitung ist ohne ausdrückliche Zustimmung nicht gestattet."
     }
+  }
 }
