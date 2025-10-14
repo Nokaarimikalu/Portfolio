@@ -24,6 +24,7 @@
                 #nameField="ngModel"
                 ngModel
                 [placeholder]="'contactMe.form.namePlaceholder' | translate"
+                [(ngModel)]="contactData.name"
             />
 
             <label for="email">{{"contactMe.form.emailLabel"  | translate }}</label>
@@ -36,8 +37,8 @@
                 email
                 #emailField="ngModel"
                 ngModel
-                pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
                 [placeholder]="'contactMe.form.emailPlaceholder' | translate"
+                [(ngModel)]="contactData.email"
             />
 
             <label for="message">{{"contactMe.form.messageLabel"  | translate }}</label>
@@ -49,12 +50,16 @@
                 #messageField="ngModel"
                 ngModel
                 [placeholder]="'contactMe.form.messagePlaceholder' | translate"
+                [(ngModel)]="contactData.message"
             ></textarea>
 
             <label class="checkbox">
                 <input type="checkbox" id="privacy" name="privacy" required #privacyField="ngModel" ngModel />
-                <p [innerHTML]="'contactMe.form.privacyText' | translate" 
-                    [class.error-text]="privacyField.invalid && privacyField.touched"></p>
+                <p [class.error-text]="privacyField.invalid && privacyField.touched">
+                    {{ 'contactMe.form.privacyTextStart' | translate }}
+                    <a [routerLink]="['/policy']">{{ 'contactMe.form.privacyLink' | translate }}</a>
+                    {{ 'contactMe.form.privacyTextEnd' | translate }}
+                </p>
             </label>
             <div class="send-button">
                 <img src="assets/image/footer/rightArrow.png" alt="" />
@@ -70,7 +75,7 @@
             </div>
             <div class="footer-name">
                 <h4>{{"contactMe.footer.copyright"| translate}}</h4>
-                <a class="legalNotice" href="/legal">{{"contactMe.footer.legalNotice"| translate}}</a>
+                <a class="legalNotice" [routerLink]="['/legal']">{{"contactMe.footer.legalNotice"| translate}}</a>
             </div>
         </div>
         

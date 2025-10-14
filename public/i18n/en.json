@@ -38,7 +38,9 @@
             "emailPlaceholder": "youremail@gmail.com",
             "messageLabel": "How can I help you?",
             "messagePlaceholder": "Hello Pascal, I am interested in...",
-            "privacyText": "I've read the <a href=\"policy\">privacy policy</a> and agree to the processing of my data as outlined.",
+            "privacyTextStart": "I've read the ",
+            "privacyLink": "privacy policy",
+            "privacyTextEnd": " and agree to the processing of my data as outlined.",
             "sendButton": "Send"
         },
         "footer": {
