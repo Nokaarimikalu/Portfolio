@@ -15,6 +15,10 @@ section{
     @media(min-width:3000px){
         padding-top: 18em;
     }
+    @media(min-width: 1920px){
+        padding-left: 0em;
+        padding-right: 0em;
+    }
     .footer-part {
         display: flex;
         justify-content: space-between;
@@ -102,6 +106,80 @@ section{
                     transition: color 0.3s ease;
                 }
             }
+            
+            .input-container {
+                position: relative;
+                width: 100%;
+            }
+            
+            .validation-icon {
+                position: absolute;
+                right: 12px;
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: 20px;
+                font-weight: bold;
+                pointer-events: auto;
+                cursor: help;
+                transition: all 0.3s ease;
+                
+                &.valid {
+                    color: #44ff44;
+                    
+                    &:hover {
+                        color: #22dd22;
+                        transform: translateY(-50%) scale(1.1);
+                    }
+                }
+                
+                &.invalid {
+                    color: #ff4444;
+                    animation: subtleShake 2s ease-in-out infinite;
+                    
+                    &:hover {
+                        color: #dd2222;
+                        transform: translateY(-50%) scale(1.1);
+                        animation: none;
+                    }
+                }
+                
+                &[title]:hover::after {
+                    content: attr(title);
+                    position: absolute;
+                    right: 100%;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    background-color: rgba(0, 0, 0, 0.9);
+                    color: white;
+                    padding: 8px 12px;
+                    border-radius: 6px;
+                    font-size: 14px;
+                    font-weight: normal;
+                    white-space: nowrap;
+                    z-index: 1000;
+                    margin-right: 8px;
+                    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+                }
+                
+                &[title]:hover::before {
+                    content: '';
+                    position: absolute;
+                    right: 100%;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    border: 6px solid transparent;
+                    border-left-color: rgba(0, 0, 0, 0.9);
+                    margin-right: 2px;
+                    z-index: 1001;
+                }
+            }
+            
+            @keyframes subtleShake {
+                0%, 100% { transform: translateY(-50%) translateX(0px); }
+                10%, 30%, 50%, 70%, 90% { transform: translateY(-50%) translateX(-1px); }
+                20%, 40%, 60%, 80% { transform: translateY(-50%) translateX(1px); }
+            }
+            
             .inputfeld {
                 background: transparent;
                 border-top: none;
@@ -381,4 +459,3 @@ section{
         }
     }
 }
-

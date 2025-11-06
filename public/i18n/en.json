@@ -1,4 +1,7 @@
 {
+    "common": {
+        "back": "Back"
+    },
     "nav": {
         "about": "About me",
         "skills": "Skills",
@@ -38,7 +41,23 @@
             "emailPlaceholder": "youremail@gmail.com",
             "messageLabel": "How can I help you?",
             "messagePlaceholder": "Hello Pascal, I am interested in...",
-            "privacyText": "I've read the <a href=\"policy\">privacy policy</a> and agree to the processing of my data as outlined.",
+            "privacyText": "I've read the privacy policy and agree to the processing of my data as outlined.",
+            "privacyLink": "privacy policy",
+            "validation": {
+                "name": {
+                    "valid": "Name is valid",
+                    "required": "Name is required"
+                },
+                "email": {
+                    "valid": "Email is valid",
+                    "required": "Email is required", 
+                    "invalid": "Please enter a valid email address (e.g. name@example.com)"
+                },
+                "message": {
+                    "valid": "Message is valid",
+                    "required": "Message is required"
+                }
+            },
             "sendButton": "Send"
         },
         "footer": {

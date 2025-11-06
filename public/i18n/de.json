@@ -1,4 +1,7 @@
 {
+    "common": {
+        "back": "Zurück"
+    },
     "nav": {
         "about": "Über mich",
         "skills": "Fähigkeiten",
@@ -38,7 +41,23 @@
             "emailPlaceholder": "deineemail@gmail.com",
             "messageLabel": "Wie kann ich dir helfen?",
             "messagePlaceholder": "Hallo Pascal, ich interessiere mich für...",
-            "privacyText": "Ich habe die <a href=\"policy\">Datenschutzbestimmungen</a> gelesen und stimme der Verarbeitung meiner Daten zu.",
+            "privacyText": "Ich habe die Datenschutzbestimmungen gelesen und stimme der Verarbeitung meiner Daten zu.",
+            "privacyLink": "Datenschutzbestimmungen",
+            "validation": {
+                "name": {
+                    "valid": "Name ist gültig",
+                    "required": "Name ist erforderlich"
+                },
+                "email": {
+                    "valid": "Email ist gültig", 
+                    "required": "Email ist erforderlich",
+                    "invalid": "Bitte geben Sie eine gültige Email-Adresse ein (z.B. name@example.com)"
+                },
+                "message": {
+                    "valid": "Nachricht ist gültig",
+                    "required": "Nachricht ist erforderlich"
+                }
+            },
             "sendButton": "Senden"
         },
         "footer": {

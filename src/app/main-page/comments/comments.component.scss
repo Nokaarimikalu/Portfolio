@@ -13,6 +13,9 @@ section {
         display: flex;
         flex-direction: column;
         padding: 12em;
+        @media(min-width:1920px){
+            padding: 12em 0em;
+        }
         .upper-part {
             display: flex;
             flex-direction: column;
