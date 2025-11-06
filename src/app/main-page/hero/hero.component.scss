@@ -35,6 +35,9 @@ section {
             @media (max-width: 700px) {
                 display: none;
             }
+            @media (min-width: 1920px){
+                right: 48em;
+            }
             a {
                 border: 2px solid white;
                 border-radius: 50px;

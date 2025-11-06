@@ -1,27 +1,31 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
-import { HeaderComponent } from "../shared/header/header.component";
 import { ProjectService, Project } from '../shared/services/project.service';
+import { ScrollMemoryService } from '../shared/services/scroll-memory.service';
 import { TranslatePipe } from '@ngx-translate/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-project-full-view',
-  imports: [HeaderComponent, TranslatePipe, CommonModule, RouterModule],
+  imports: [TranslatePipe, CommonModule, RouterModule],
   templateUrl: './project-full-view.component.html',
   styleUrl: './project-full-view.component.scss'
 })
-export class ProjectFullViewComponent implements OnInit {
+export class ProjectFullViewComponent implements OnInit, OnDestroy {
   project: Project | undefined;
   nextProject: Project | undefined;
 
   constructor(
     private route: ActivatedRoute,
     private router: Router,
-    private projectService: ProjectService
+    private projectService: ProjectService,
+    private scrollMemoryService: ScrollMemoryService
   ) {}
 
   ngOnInit(): void {
+    // Scrolle zum Anfang der Projektseite
+    this.scrollMemoryService.scrollToTop();
+    
     this.route.paramMap.subscribe(params => {
       const projectId = params.get('id');
       if (projectId) {
@@ -37,14 +41,22 @@ export class ProjectFullViewComponent implements OnInit {
     });
   }
 
+  ngOnDestroy(): void {
+  }
+
   goToNextProject(): void {
     if (this.nextProject) {
+      // Auch bei Next Project sollte die Hauptseiten-Position gespeichert bleiben
       this.router.navigate(['/project', this.nextProject.id]);
     }
   }
 
   goBack(): void {
-    this.router.navigate(['/']);
+    this.router.navigate(['/']).then(() => {
+      setTimeout(() => {
+        this.scrollMemoryService.restoreScrollPosition('/');
+      }, 100);
+    });
   }
 
   getTechIcon(technology: string): string {

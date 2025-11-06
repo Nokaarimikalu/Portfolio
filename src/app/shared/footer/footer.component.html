@@ -15,50 +15,77 @@
         </div>
         <form #contactForm="ngForm"  (ngSubmit)="onSubmit(contactForm)">
             <label for="name">{{"contactMe.form.nameLabel"  | translate }}</label>
-            <input
-                class="inputfeld"
-                type="text"
-                id="name"
-                name="name"
-                required
-                #nameField="ngModel"
-                ngModel
-                [placeholder]="'contactMe.form.namePlaceholder' | translate"
-                [(ngModel)]="contactData.name"
-            />
+            <div class="input-container">
+                <input
+                    class="inputfeld"
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    #nameField="ngModel"
+                    [(ngModel)]="contactData.name"
+                    (input)="onInputChange()"
+                    [placeholder]="'contactMe.form.namePlaceholder' | translate"
+                />
+                @if (nameField.touched) {
+                    <span class="validation-icon" 
+                          [class]="nameField.valid ? 'valid' : 'invalid'"
+                          [title]="getNameTooltip(nameField)">
+                        {{ nameField.valid ? '✓' : '✕' }}
+                    </span>
+                }
+            </div>
 
             <label for="email">{{"contactMe.form.emailLabel"  | translate }}</label>
-            <input
-                class="inputfeld"
-                type="email"
-                id="email"
-                name="email"
-                required
-                email
-                #emailField="ngModel"
-                ngModel
-                [placeholder]="'contactMe.form.emailPlaceholder' | translate"
-                [(ngModel)]="contactData.email"
-            />
+            <div class="input-container">
+                <input
+                    class="inputfeld"
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    email
+                    #emailField="ngModel"
+                    [(ngModel)]="contactData.email"
+                    (input)="onInputChange()"
+                    pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                    [placeholder]="'contactMe.form.emailPlaceholder' | translate"
+                />
+                @if (emailField.touched) {
+                    <span class="validation-icon" 
+                          [class]="emailField.valid ? 'valid' : 'invalid'"
+                          [title]="getEmailTooltip(emailField)">
+                        {{ emailField.valid ? '✓' : '✕' }}
+                    </span>
+                }
+            </div>
 
             <label for="message">{{"contactMe.form.messageLabel"  | translate }}</label>
-            <textarea
-                class="inputfeld"
-                id="message"
-                name="message"
-                required
-                #messageField="ngModel"
-                ngModel
-                [placeholder]="'contactMe.form.messagePlaceholder' | translate"
-                [(ngModel)]="contactData.message"
-            ></textarea>
+            <div class="input-container">
+                <textarea
+                    class="inputfeld"
+                    id="message"
+                    name="message"
+                    required
+                    #messageField="ngModel"
+                    [(ngModel)]="contactData.message"
+                    (input)="onInputChange()"
+                    [placeholder]="'contactMe.form.messagePlaceholder' | translate"
+                ></textarea>
+                @if (messageField.touched) {
+                    <span class="validation-icon" 
+                          [class]="messageField.valid ? 'valid' : 'invalid'"
+                          [title]="getMessageTooltip(messageField)">
+                        {{ messageField.valid ? '✓' : '✕' }}
+                    </span>
+                }
+            </div>
 
             <label class="checkbox">
                 <input type="checkbox" id="privacy" name="privacy" required #privacyField="ngModel" ngModel />
                 <p [class.error-text]="privacyField.invalid && privacyField.touched">
-                    {{ 'contactMe.form.privacyTextStart' | translate }}
-                    <a [routerLink]="['/policy']">{{ 'contactMe.form.privacyLink' | translate }}</a>
-                    {{ 'contactMe.form.privacyTextEnd' | translate }}
+                    {{ 'contactMe.form.privacyText' | translate }} 
+                    <a [routerLink]="['/policy']" (click)="onPolicyClick()">{{ 'contactMe.form.privacyLink' | translate }}</a>
                 </p>
             </label>
             <div class="send-button">
@@ -75,7 +102,7 @@
             </div>
             <div class="footer-name">
                 <h4>{{"contactMe.footer.copyright"| translate}}</h4>
-                <a class="legalNotice" [routerLink]="['/legal']">{{"contactMe.footer.legalNotice"| translate}}</a>
+                <a class="legalNotice" [routerLink]="['/legal']" (click)="onLegalClick()">{{"contactMe.footer.legalNotice"| translate}}</a>
             </div>
         </div>
         
